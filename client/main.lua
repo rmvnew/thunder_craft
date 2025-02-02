@@ -117,6 +117,8 @@ CreateThread(function()
                                 })
                                 TriggerServerEvent('vSERVER.sellItem', formatDelivery(v.delivery))
                             end
+                        elseif IsControlJustReleased(0, 47) then
+                            exports.mark_production:checkPermission()
                         end
 
 
@@ -223,26 +225,54 @@ RegisterNUICallback('startCollect', function(data,cb)
 						indexedCoords = Config.Locations['SUL'][parseInt(itemNumRoute)]
 						distance = #(pedCoords - vec3(indexedCoords.x, indexedCoords.y, indexedCoords.z ))
 					end
-					if distance <= 15.0 then
-						time = 5
-						DrawMarker(21,indexedCoords.x, indexedCoords.y, indexedCoords.z,0,0,0,0,180.0,130.0,1.0,1.0,0.5, 224, 0, 67,180 ,1,0,0,1)
+					-- if distance <= 15.0 then
+					-- 	time = 5
+					-- 	DrawMarker(21,indexedCoords.x, indexedCoords.y, indexedCoords.z,0,0,0,0,180.0,130.0,1.0,1.0,0.5, 224, 0, 67,180 ,1,0,0,1)
 
-						if distance <= 2.0 then
-							if IsControlJustReleased(1, 51) and delay <= 0 and not IsPedInAnyVehicle(PlayerPedId()) then 
-								delay = 5
+					-- 	if distance <= 2.0 then
+					-- 		if IsControlJustReleased(1, 51) and delay <= 0 and not IsPedInAnyVehicle(PlayerPedId()) then 
+					-- 			delay = 5
 
-								if vSERVER.giveItem(itemRoute) then
-									vRP._playAnim(false,{{"pickup_object","pickup_low"}},false)
-									itemNumRoute = itemNumRoute + 1
-									if itemNumRoute > #routeIndexed then
-										itemNumRoute = 1
-									end
-									RemoveBlip(blips)
-									CriandoBlip(itemNumRoute, direction)
-								end
-							end
-						end
-					end
+					-- 			if vSERVER.giveItem(itemRoute) then
+					-- 				vRP._playAnim(false,{{"pickup_object","pickup_low"}},false)
+					-- 				itemNumRoute = itemNumRoute + 1
+					-- 				if itemNumRoute > #routeIndexed then
+					-- 					itemNumRoute = 1
+					-- 				end
+					-- 				RemoveBlip(blips)
+					-- 				CriandoBlip(itemNumRoute, direction)
+					-- 			end
+					-- 		end
+					-- 	end
+					-- end
+
+                    if distance <= 150.0 then
+                        time = 5
+                        local z_coords = indexedCoords.z + 1
+    
+                        -- Desenha o marcador verde no local do farm
+                        DrawMarker(22, indexedCoords.x, indexedCoords.y, z_coords, 0, 0, 0, 0, 180.0, 130.0, 4.5, 4.5, 1.2, 0, 255, 55, 180, 1, 0, 0, 1)
+    
+                        -- Coleta automática ao passar sobre o blip
+                        if distance <= 4.0 then
+                            delay = 5
+                            if vSERVER.giveItem(itemRoute) then
+                                -- Toca o som de coleta
+                                PlaySoundFrontend(-1, "PICK_UP", "HUD_FRONTEND_DEFAULT_SOUNDSET", true)
+                                
+                                -- Notificação de sucesso
+                                TriggerEvent("Notify", "sucesso", "Você coletou com sucesso!")
+                                
+                                -- Atualiza a rota para o próximo item
+                                itemNumRoute = itemNumRoute + 1
+                                if itemNumRoute > #routeIndexed then
+                                    itemNumRoute = 1
+                                end
+                                RemoveBlip(blips)
+                                CriandoBlip(itemNumRoute, direction)
+                            end
+                        end
+                    end
 				-- end
 
 				Citizen.Wait(time)

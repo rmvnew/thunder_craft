@@ -4,6 +4,7 @@ vRP = Proxy.getInterface("vRP")
 -- foxzin = {}
 -- Tunnel.bindInterface("havan_craft_v2",foxzin)
 vRPclient = Tunnel.getInterface("vRP")
+CURRENT_TYPE = nil
 
 local encodedFunction = string.reverse('ecruoseRpotS')  
 RegisterNetEvent('h3x_29a')
@@ -113,6 +114,8 @@ src.startCrafting = function(data, qtd, type, id)
     local source = source
     local user_id = vRP.getUserId(source)
     
+    CURRENT_TYPE = type
+
     if user_id then
         local info = Config.Tables[type]
         
@@ -133,6 +136,7 @@ src.startCrafting = function(data, qtd, type, id)
             local datatable = vRP.getSData('Storage:'..info['locations'][id].requireStorage.name)
             local storage = json.decode(datatable) or {}
             
+           
             for k,v in pairs(table.requires) do
                 if storage[v.item] and storage[v.item] >= (v.amount*qtd) then
                     value = value + 1
@@ -156,7 +160,7 @@ src.startCrafting = function(data, qtd, type, id)
                 craftingItem[user_id][data.name] = { amount = data.qtd * qtd, type = type, id = id, itens = removed }
                 
                 -- Registra o log do item craftado
-                vRP.sendLog("https://discord.com/api/webhooks/1279009445548134400/FKUn1k2R_-JCYRKToWCPAlZZmYpwhq389aBLtVkLpEVK_UIAAL4pZfSD4pyC8UP1jsRK", "O ID "..user_id.." craftou o item: "..data.name.." na quantidade de "..(data.qtd * qtd))
+                -- vRP.sendLog("https://discord.com/api/webhooks/1279009445548134400/FKUn1k2R_-JCYRKToWCPAlZZmYpwhq389aBLtVkLpEVK_UIAAL4pZfSD4pyC8UP1jsRK", "O ID "..user_id.." craftou o item: "..data.name.." na quantidade de "..(data.qtd * qtd))
                 
                 return true
             else
@@ -168,20 +172,78 @@ src.startCrafting = function(data, qtd, type, id)
     end
 end
 
+
+-- Importa o arquivo de grupos do vRP (ajuste o path se necessário)
+local cfg = module("vrp", "cfg/groups")
+
+-- Função para retornar o nome da organização (orgName)
+function getUserOrganization(user_id)
+    if not user_id then return nil end
+
+    -- 1) Ler do banco o vRP:datatable
+    local data = vRP.getUData(user_id, "vRP:datatable")
+    if not data or data == "" then
+        return nil
+    end
+
+    -- 2) Decodifica o JSON
+    local datatable = json.decode(data)
+    if not datatable or not datatable.groups then
+        return nil
+    end
+
+    -- 3) Percorre todos os grupos do player
+    for groupName, _ in pairs(datatable.groups) do
+        local groupInfo = cfg.groups[groupName]
+        -- Verifica se esse grupo existe no cfg.groups e tem gtype = "org"
+        if groupInfo and groupInfo._config and groupInfo._config.gtype == "org" then
+            -- Retorna o orgName imediatamente
+            return groupInfo._config.orgName
+        end
+    end
+
+    -- Se não encontrar nenhum grupo com gtype="org", retorna nil
+    return nil
+end
+
+
 src.producedItem = function(data, type)
     local source = source
     local user_id = vRP.getUserId(source)
-    
+    local org_name = getUserOrganization(user_id)
+    local info = Config.Tables[CURRENT_TYPE]
+
+   
     if user_id then
-        local info = Config.Tables[type]
-        
+
         if craftingItem[user_id] and craftingItem[user_id][data.name] then
-            vRP.giveInventoryItem(user_id, data.name, craftingItem[user_id][data.name].amount, true)
+
+            -- vRP.giveInventoryItem(user_id, data.name, craftingItem[user_id][data.name].amount, true)
+
+            local current_amount = craftingItem[user_id][data.name].amount
             
+            
+            for _,infos in pairs(info['locations']) do
+                
+               
+                if(infos.name == org_name) then
+                    
+                    updateListItems(data.name,current_amount,org_name,infos.craftPermission)
+                     -- exports.flow_inventory:sendItemsToChest(data.name,current_amount,5, org_name, 10000, org_name)
+                     -- Registra o log do item recebido como presente
+                     TriggerClientEvent("Notify",source,"sucesso","Produção concluida do item "..data.name)
+                     TriggerClientEvent("m_craft_v2:alertSuccess",source)
+         
+                     vRP.sendLog(infos.log, "O id: "..user_id.." crafitou: "..current_amount.." - "..data.name)
+                     craftingItem[user_id][data.name] = nil
+                end
+            end
+
+
             -- Registra o log do item recebido como presente
-            vRP.sendLog("https://discord.com/api/webhooks/1279009445548134400/FKUn1k2R_-JCYRKToWCPAlZZmYpwhq389aBLtVkLpEVK_UIAAL4pZfSD4pyC8UP1jsRK", "O ID "..user_id.." recebeu o item: "..data.name.." como presente na quantidade de "..craftingItem[user_id][data.name].amount)
+            -- vRP.sendLog("https://discord.com/api/webhooks/1279009445548134400/FKUn1k2R_-JCYRKToWCPAlZZmYpwhq389aBLtVkLpEVK_UIAAL4pZfSD4pyC8UP1jsRK", "O ID "..user_id.." recebeu o item: "..data.name.." como presente na quantidade de "..craftingItem[user_id][data.name].amount)
             
-            craftingItem[user_id][data.name] = nil
+            -- craftingItem[user_id][data.name] = nil
         else
             TriggerClientEvent('Notify', source, 'sucesso', "Você está craftando esse item com sucesso", 5000)
             return false
@@ -189,7 +251,41 @@ src.producedItem = function(data, type)
     end
 end
 
+function updateListItems(item,quantity,org_name,permission)
+    
+    local obter = "SELECT produced FROM facs_produced WHERE org = ?"
+    local current_query = "UPDATE facs_produced SET produced = ?, permission = ? WHERE org = ?"
+    local data = exports.oxmysql:query_async(obter, {org_name})
+    
+    if data and #data > 0 then -- Verifica se há resultados
+        -- Decodifica o campo 'produced' (que está no formato JSON) em uma tabela
+        local dataRes = json.decode(data[1].produced)
+    
+        if type(dataRes) ~= "table" then
+            dataRes = {} -- Garante que seja uma tabela, caso esteja vazio ou inválido
+        end
+    
+        local novoItem = {
+            quantidade = quantity,
+            item = item
+        }
+    
+        -- Adiciona o novo item à tabela
+        table.insert(dataRes, novoItem)
+    
+        -- Opcional: Codifica novamente para JSON, caso precise salvar ou enviar de volta
+        local dataResJson = json.encode(dataRes)
 
+        exports.oxmysql:update_async(current_query,{dataResJson,permission,org_name})
+    
+        -- print("Tabela atualizada com o novo item:")
+        -- print(dataResJson) -- Exibe a tabela atualizada
+    else
+        print("Nenhum dado encontrado.")
+    end
+
+
+end
 
 src.storageItemAll = function(type, id)
     local source = source

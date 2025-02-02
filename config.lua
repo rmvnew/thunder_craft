@@ -1,4 +1,5 @@
 URL  = '127.0.0.1'
+MENSAGEM_BANCADA = 'Pressione ~r~[E]~w~ para acessar a bancada ou ~b~[G]~w~ para acessar o depósito.'
 
 Config = {
     images = 'http://'..URL..'/inventario/', -- URL DAS SUAS IMAGENS
@@ -222,6 +223,7 @@ Config = {
                         active = true,
                         name = 'Mafia'
                     },
+                    log = '',
                     tablePermission = 'perm.mafia', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidermafia', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -230,7 +232,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -267,6 +269,7 @@ Config = {
                         active = true,
                         name = 'Cartel'
                     },
+                    log = '',
                     tablePermission = 'perm.cartel', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidercartel', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -275,7 +278,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -312,6 +315,7 @@ Config = {
                         active = true,
                         name = 'Croacia'
                     },
+                    log = '',
                     tablePermission = 'perm.croacia', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidercroacia', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -320,7 +324,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -357,6 +361,7 @@ Config = {
                         active = true,
                         name = 'Yakuza'
                     },
+                    log = '',
                     tablePermission = 'perm.yakuza', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lideryakuza', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -365,7 +370,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -402,6 +407,7 @@ Config = {
                         active = true,
                         name = 'Triade'
                     },
+                    log = '',
                     tablePermission = 'perm.triade', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidertriade', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -410,7 +416,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -447,6 +453,7 @@ Config = {
                         active = true,
                         name = 'Merlim'
                     },
+                    log = '',
                     tablePermission = 'perm.merlim', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidermerlim', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -455,7 +462,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -492,6 +499,7 @@ Config = {
                         active = true,
                         name = 'BlackOut'
                     },
+                    log = '',
                     tablePermission = 'perm.blackout', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderblackOut', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -500,7 +508,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -537,6 +545,7 @@ Config = {
                         active = true,
                         name = 'Wolves'
                     },
+                    log = '',
                     tablePermission = 'perm.wolves', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderwolves', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -545,7 +554,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -582,6 +591,7 @@ Config = {
                         active = true,
                         name = 'Franca'
                     },
+                    log = '',
                     tablePermission = 'perm.franca', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderfranca', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -590,7 +600,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -829,6 +839,7 @@ Config = {
                         active = true,
                         name = 'Grota'
                     },
+                    log = '',
                     tablePermission = 'perm.grota', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidergrota', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -874,6 +885,7 @@ Config = {
                         active = true,
                         name = 'Milicia'
                     },
+                    log = '',
                     tablePermission = 'perm.milicia', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidermilicia', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -882,7 +894,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -919,6 +931,7 @@ Config = {
                         active = true,
                         name = 'Alemao'
                     },
+                    log = '',
                     tablePermission = 'perm.alemao', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lideralemao', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -927,7 +940,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -964,6 +977,7 @@ Config = {
                         active = true,
                         name = 'Helipa'
                     },
+                    log = '',
                     tablePermission = 'perm.helipa', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderhelipa', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -972,7 +986,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1009,6 +1023,7 @@ Config = {
                         active = true,
                         name = 'Crips'
                     },
+                    log = '',
                     tablePermission = 'perm.crips', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidercrips', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -1017,7 +1032,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1054,6 +1069,7 @@ Config = {
                         active = true,
                         name = 'Canada'
                     },
+                    log = '',
                     tablePermission = 'perm.canada', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidercanada', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -1062,7 +1078,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1099,6 +1115,7 @@ Config = {
                         active = true,
                         name = 'Turquia'
                     },
+                    log = '',
                     tablePermission = 'perm.turquia', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderturquia', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -1107,7 +1124,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1288,6 +1305,7 @@ Config = {
                         active = true,
                         name = 'MotoClub'
                     },
+                    log = '',
                     tablePermission = 'perm.motoclub', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidermotoclub', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -1296,7 +1314,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1334,6 +1352,7 @@ Config = {
                         active = true,
                         name = 'Furious'
                     },
+                    log = '',
                     tablePermission = 'perm.furious', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderfurious', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -1342,7 +1361,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1379,6 +1398,7 @@ Config = {
                         active = true,
                         name = 'Lacoste'
                     },
+                    log = '',
                     tablePermission = 'perm.lacoste', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderlacoste', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -1387,7 +1407,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1424,6 +1444,7 @@ Config = {
                         active = true,
                         name = 'b13'
                     },
+                    log = '',
                     tablePermission = 'perm.b13', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderb13', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -1432,7 +1453,7 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1527,6 +1548,7 @@ Config = {
                     active = true,
                     name = 'furiarjCustom'
                 },
+                log = '',
                 tablePermission = 'mecanico.permissao', -- PERMISSAO PARA ACESSAR A BANCADA
                 craftPermission = 'perm.lidermecanica', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
@@ -1535,7 +1557,7 @@ Config = {
                             coords.x,
                             coords.y,
                             coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1573,6 +1595,7 @@ Config = {
                     active = true,
                     name = 'StreetRacing'
                 },
+                log = '',
                 tablePermission = 'mecanico.permissao', -- PERMISSAO PARA ACESSAR A BANCADA
                 craftPermission = 'perm.lidermec2', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
@@ -1581,7 +1604,7 @@ Config = {
                             coords.x,
                             coords.y,
                             coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1676,6 +1699,7 @@ Config = {
                 active = true,
                 name = 'Hospital'
             },
+            log = '',
             tablePermission = 'perm.unizk', -- PERMISSAO PARA ACESSAR A BANCADA
             craftPermission = 'perm.hplider', -- PERMISSAO PARA CRAFTAR ITEM
             drawMarker = function(coords, dist)
@@ -1684,7 +1708,7 @@ Config = {
                         coords.x,
                         coords.y,
                         coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -1845,6 +1869,7 @@ Config = {
                 active = true,
                 name = 'Portugal'
             },
+            log = '',
             tablePermission = 'perm.portugal', -- PERMISSAO PARA ACESSAR A BANCADA
             craftPermission = 'perm.liderportugal', -- PERMISSAO PARA CRAFTAR ITEM
             drawMarker = function(coords, dist)
@@ -1853,7 +1878,7 @@ Config = {
                         coords.x,
                         coords.y,
                         coords.z + 0.1,
-                    'Pressione ~r~[E]~w~ para acessar a bancada.'
+                    MENSAGEM_BANCADA
                 )
                 DrawMarker(
                     27,
@@ -2014,6 +2039,7 @@ locations = {
             active = true,
             name = 'Argentina'
         },
+        log = '',
         tablePermission = 'perm.argentina', -- PERMISSAO PARA ACESSAR A BANCADA
         craftPermission = 'perm.liderargentina', -- PERMISSAO PARA CRAFTAR ITEM
         drawMarker = function(coords, dist)
@@ -2022,7 +2048,7 @@ locations = {
                     coords.x,
                     coords.y,
                     coords.z + 0.1,
-                'Pressione ~r~[E]~w~ para acessar a bancada.'
+                MENSAGEM_BANCADA
             )
             DrawMarker(
                 27,
@@ -2182,6 +2208,7 @@ locations = {
             active = true,
             name = 'Brasil'
         },
+        log = '',
         tablePermission = 'perm.brasil', -- PERMISSAO PARA ACESSAR A BANCADA
         craftPermission = 'perm.liderbrasil', -- PERMISSAO PARA CRAFTAR ITEM
         drawMarker = function(coords, dist)
@@ -2190,7 +2217,7 @@ locations = {
                     coords.x,
                     coords.y,
                     coords.z + 0.1,
-                'Pressione ~r~[E]~w~ para acessar a bancada.'
+                MENSAGEM_BANCADA
             )
             DrawMarker(
                 27,
@@ -2461,6 +2488,7 @@ locations = {
                     active = true,
                     name = 'Cv'
                 },
+                log = '',
                 tablePermission = 'perm.cv', -- PERMISSAO PARA ACESSAR A BANCADA
                 craftPermission = 'perm.lidercv', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
@@ -2469,7 +2497,7 @@ locations = {
                             coords.x,
                             coords.y,
                             coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2507,6 +2535,7 @@ locations = {
                     active = true,
                     name = 'Camorra'
                 },
+                log = '',
                 tablePermission = 'perm.camorra', -- PERMISSAO PARA ACESSAR A BANCADA
                 craftPermission = 'perm.lidercamorra', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
@@ -2515,7 +2544,7 @@ locations = {
                             coords.x,
                             coords.y,
                             coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2552,6 +2581,7 @@ locations = {
                     active = true,
                     name = 'Mexico'
                 },
+                log = '',
                 tablePermission = 'perm.mexico', -- PERMISSAO PARA ACESSAR A BANCADA
                 craftPermission = 'perm.lidermexico', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
@@ -2560,7 +2590,7 @@ locations = {
                             coords.x,
                             coords.y,
                             coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2597,6 +2627,7 @@ locations = {
                     active = true,
                     name = 'Jamaica'
                 },
+                log = '',
                 tablePermission = 'perm.jamaica', -- PERMISSAO PARA ACESSAR A BANCADA
                 craftPermission = 'perm.liderjamaica', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
@@ -2605,7 +2636,7 @@ locations = {
                             coords.x,
                             coords.y,
                             coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2642,6 +2673,7 @@ locations = {
                     active = true,
                     name = 'Australia'
                 },
+                log = '',
                 tablePermission = 'perm.australia', -- PERMISSAO PARA ACESSAR A BANCADA
                 craftPermission = 'perm.lideraustralia', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
@@ -2650,7 +2682,7 @@ locations = {
                             coords.x,
                             coords.y,
                             coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2834,6 +2866,7 @@ locations = {
                         active = true,
                         name = 'Tequila'
                     },
+                    log = '',
                     tablePermission = 'perm.tequila', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidertequila', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -2842,7 +2875,7 @@ locations = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2880,6 +2913,7 @@ locations = {
                         active = true,
                         name = 'Bahamas'
                     },
+                    log = 'https://discordapp.com/api/webhooks/1335615589380653126/UWrah8RGPPyWbEqd8iYMx_ta0ZjHaJGdPGBozHY2BeavR5E5fLqxZg9sBlecX7HEWiar',
                     tablePermission = 'perm.bahamas', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderbahamas', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -2888,7 +2922,7 @@ locations = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2925,6 +2959,7 @@ locations = {
                         active = true,
                         name = 'Iluminatis'
                     },
+                    log = '',
                     tablePermission = 'perm.iluminatis', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lideriluminatis', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -2933,7 +2968,7 @@ locations = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -2970,6 +3005,7 @@ locations = {
                         active = true,
                         name = 'Cassino'
                     },
+                    log = '',
                     tablePermission = 'perm.cassino', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.lidercassino', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -2978,7 +3014,7 @@ locations = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -3015,6 +3051,7 @@ locations = {
                         active = true,
                         name = 'Luxury'
                     },
+                    log = '',
                     tablePermission = 'perm.luxury', -- PERMISSAO PARA ACESSAR A BANCADA
                     craftPermission = 'perm.liderluxury', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
@@ -3023,7 +3060,7 @@ locations = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                        'Pressione ~r~[E]~w~ para acessar a bancada.'
+                        MENSAGEM_BANCADA
                     )
                     DrawMarker(
                         27,
@@ -3401,26 +3438,27 @@ locations = {
             {['x'] = -195.33979797363, ['y'] = -835.03845214844, ['z'] = 30.730991363525}
         },
         ['NORTE'] = {
-            {['x'] = -2194.1354980469, ['y'] = -388.45462036133, ['z'] = 13.4704246521},
-            {['x'] = -3056.3854980469, ['y'] = 176.16958618164, ['z'] = 11.608025550842},
-            {['x'] = -3070.3815917969, ['y'] = 1734.58984375, ['z'] = 36.621490478516},
-            {['x'] = -2568.1369628906, ['y'] = 2347.6342773438, ['z'] = 33.080039978027},
-            {['x'] = -3036.3552246094, ['y'] = 3338.3732910156, ['z'] = 9.9349489212036},
-            {['x'] = -2188.9052734375, ['y'] = 4252.9638671875, ['z'] = 48.940746307373},
-            {['x'] = -1046.5561523438, ['y'] = 5323.1616210938, ['z'] = 45.031158447266},
-            {['x'] = -388.29217529297, ['y'] = 6269.0458984375, ['z'] = 30.446243286133},
-            {['x'] = 578.3857421875, ['y'] = 6558.1704101563, ['z'] = 28.018701553345},
-            {['x'] = 1722.88, ['y'] = 6417.93, ['z'] = 35.0},
-            {['x'] = 2559.7729492188, ['y'] = 5241.736328125, ['z'] = 44.841533660889},
-            {['x'] = 1792.2270507813, ['y'] = 4593.7094726563, ['z'] = 37.682899475098},
-            {['x'] = 812.02703857422, ['y'] = 4229.8442382813, ['z'] = 52.776302337646},
-            {['x'] = 1662.9755859375, ['y'] = 4768.0571289063, ['z'] = 42.007564544678},
-            {['x'] = 2803.7299804688, ['y'] = 4971.3461914063, ['z'] = 33.498306274414},
-            {['x'] = 3066.6625976563, ['y'] = 3820.4030761719, ['z'] = 74.83943939209},
-            {['x'] = 2086.1723632813, ['y'] = 2707.5336914063, ['z'] = 48.272926330566},
-            {['x'] = 1925.9898681641, ['y'] = 1794.541015625, ['z'] = 64.200401306152},
-            {['x'] = 2498.7375488281, ['y'] = 808.64178466797, ['z'] = 94.018333435059},
-            {['x'] = 2386.96875, ['y'] = -391.27166748047, ['z'] = 75.157066345215}
+            { ['x'] = -2077.46, ['y'] = -371.96, ['z'] = 11.61 },
+            { ['x'] = -3063.38, ['y'] = 670.5, ['z'] = 11.26 },
+            { ['x'] = -2684.0, ['y'] = 2417.2, ['z'] = 16.16 },
+            { ['x'] = -2751.79, ['y'] = 3473.46, ['z'] = 10.77 },
+            { ['x'] = -2204.32, ['y'] = 4254.33, ['z'] = 47.04 },
+            { ['x'] = -1482.71, ['y'] = 5011.22, ['z'] = 62.21 },
+            { ['x'] = -212.5, ['y'] = 6317.23, ['z'] = 30.89 },
+            { ['x'] = 172.16, ['y'] = 6711.8, ['z'] = 38.42 },
+            { ['x'] = 2123.1, ['y'] = 6019.94, ['z'] = 50.62 },
+            { ['x'] = 2383.86, ['y'] = 5131.86, ['z'] = 46.84 },
+            { ['x'] = 1691.91, ['y'] = 4665.01, ['z'] = 42.83 },
+            { ['x'] = 2614.41, ['y'] = 4764.1, ['z'] = 33.14 },
+            { ['x'] = 2738.67, ['y'] = 4398.37, ['z'] = 48.26 },
+            { ['x'] = 2112.02, ['y'] = 3621.93, ['z'] = 38.23 },
+            { ['x'] = 2286.26, ['y'] = 3012.33, ['z'] = 45.65 },
+            { ['x'] = 1520.81, ['y'] = 3741.62, ['z'] = 34.0 },
+            { ['x'] = 407.54, ['y'] = 3564.94, ['z'] = 32.97 },
+            { ['x'] = 279.39, ['y'] = 2648.87, ['z'] = 44.13 },
+            { ['x'] = -742.03, ['y'] = 2801.08, ['z'] = 25.44 },
+            { ['x'] = -2809.78, ['y'] = 2216.93, ['z'] = 27.31 },
+            { ['x'] = -1882.68, ['y'] = -554.67, ['z'] = 11.17 },
         }
     },
     -- LOCALIZAÇÕES DAS ENTREGAS
