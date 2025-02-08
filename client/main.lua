@@ -100,6 +100,7 @@ CreateThread(function()
                     SLEEP_TIME = 5
                     Config.Tables[k]['locations'][l].drawMarker(Coords, distance)
                     if (distance <= 1.5) then
+
                         if IsControlJustPressed(0, 38) and (DelayTimer - GetGameTimer()) <= 0 then
                             DelayTimer = (GetGameTimer() + 5000)
 
@@ -116,6 +117,8 @@ CreateThread(function()
                                     collect = formatCollect(v.farm)
                                 })
                                 TriggerServerEvent('vSERVER.sellItem', formatDelivery(v.delivery))
+                            else
+                                TriggerEvent("Notify","negado","Você não tem acesso a essa bancada")
                             end
                         elseif IsControlJustReleased(0, 47) then
                             exports.mark_production:checkPermission()
@@ -127,6 +130,7 @@ CreateThread(function()
             end
 
             :: next_table ::
+            
         end
 
         Wait( SLEEP_TIME )

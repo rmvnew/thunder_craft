@@ -1,5 +1,5 @@
 URL  = '127.0.0.1'
-MENSAGEM_BANCADA = 'Pressione ~r~[E]~w~ para acessar a bancada ou ~b~[G]~w~ para acessar o depósito.'
+MENSAGEM_BANCADA = 'Pressione \n~r~[E]~w~ para bancada. \n~b~[G]~w~ para o depósito.'
 
 Config = {
     images = 'http://'..URL..'/inventario/', -- URL DAS SUAS IMAGENS
@@ -217,7 +217,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Mafia',
-                    coords = vec3(1889.86,585.37,194.8), -- COORDENADAS DA BANCADA
+                    coords = vec3(412.05,3.7,84.92), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -263,7 +263,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Cartel',
-                    coords = vec3(1391.54,1135.92,109.74), -- COORDENADAS DA BANCADA
+                    coords = vec3(1396.7,1160.48,114.33), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -309,7 +309,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Croacia',
-                    coords = vec3(-1507.21,838.17,181.59), -- COORDENADAS DA BANCADA
+                    coords = vec3(-1486.33,835.81,176.99), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -493,7 +493,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'BlackOut',
-                    coords = vec3(2003.97,-11.98,203.33), -- COORDENADAS DA BANCADA
+                    coords = vec3(2031.38,21.14,203.44), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -501,7 +501,7 @@ Config = {
                     },
                     log = '',
                     tablePermission = 'perm.blackout', -- PERMISSAO PARA ACESSAR A BANCADA
-                    craftPermission = 'perm.liderblackOut', -- PERMISSAO PARA CRAFTAR ITEM
+                    craftPermission = 'perm.liderblackout', -- PERMISSAO PARA CRAFTAR ITEM
                     drawMarker = function(coords, dist)
                         if dist <= 5.0 then
                             DrawText3Ds(
@@ -539,7 +539,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Wolves',
-                    coords = vec3(717.97,-276.96,60.2), -- COORDENADAS DA BANCADA
+                    coords = vec3(767.54,-244.91,69.83), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -585,7 +585,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Franca',
-                    coords = vec3(-2415.21,1774.74,187.67), -- COORDENADAS DA BANCADA
+                    coords = vec3(-2411.3,1770.16,187.67), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -833,7 +833,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Grota',
-                    coords = vec3(1354.03,-182.75,135.12), -- COORDENADAS DA BANCADA
+                    coords = vec3(1311.71,-198.69,120.93), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -879,7 +879,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Milicia',
-                    coords = vec3(1070.23,1005.26,250.42), -- COORDENADAS DA BANCADA
+                    coords = vec3(1066.69,1026.19,250.78), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -925,7 +925,7 @@ Config = {
                {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Alemao',
-                    coords = vec3(417.22,710.31,199.64), -- COORDENADAS DA BANCADA
+                    coords = vec3(406.19,743.07,194.77), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1017,7 +1017,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Crips',
-                    coords = vec3(1428.78,-2410.58,67.23), -- COORDENADAS DA BANCADA
+                    coords = vec3(1381.61,-2358.48,61.75), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1063,7 +1063,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Canada',
-                    coords = vec3(-135.04,-1609.74,35.03), -- COORDENADAS DA BANCADA
+                    coords = vec3(-136.56,-1610.79,35.03), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1109,7 +1109,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Turquia',
-                    coords = vec3(1361.64,-701.35,71.95), -- COORDENADAS DA BANCADA
+                    coords = vec3(1320.04,-756.01,71.83), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1299,7 +1299,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'MotoClub',
-                    coords = vec3(998.6,-124.18,74.05), -- COORDENADAS DA BANCADA
+                    coords = vec3(978.78,-92.14,74.85), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1346,7 +1346,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Furious',
-                    coords = vec3(-319.87,-131.55,38.97), -- COORDENADAS DA BANCADA
+                    coords = vec3(-323.64,-129.42,39.01), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1392,7 +1392,7 @@ Config = {
                {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Lacoste',
-                    coords = vec3(-196.53,-1318.02,31.09), -- COORDENADAS DA BANCADA
+                    coords = vec3(-227.84,-1327.29,30.89), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1435,52 +1435,52 @@ Config = {
                         end
                     end -- BLIP DO CHAO
                 },
-                {
-                    -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
-                    name = 'b13',
-                    coords = vec3(-616.39,-1620.98,33.01), -- COORDENADAS DA BANCADA
-                    requireStorage = {
-                        -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
-                        active = true,
-                        name = 'b13'
-                    },
-                    log = '',
-                    tablePermission = 'perm.b13', -- PERMISSAO PARA ACESSAR A BANCADA
-                    craftPermission = 'perm.liderb13', -- PERMISSAO PARA CRAFTAR ITEM
-                    drawMarker = function(coords, dist)
-                        if dist <= 5.0 then
-                            DrawText3Ds(
-                                coords.x,
-                                coords.y,
-                                coords.z + 0.1,
-                        MENSAGEM_BANCADA
-                    )
-                    DrawMarker(
-                        27,
-                        coords.x,
-                        coords.y,
-                        coords.z - 0.95,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        1.5,
-                        1.5,
-                        1.5,
-                        243,
-                        5,
-                        72,
-                        180,
-                        0,
-                        0,
-                        0,
-                        1
-                            )
-                        end
-                    end -- BLIP DO CHAO
-                }
+                -- {
+                --     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
+                --     name = 'b13',
+                --     coords = vec3(-616.39,-1620.98,33.01), -- COORDENADAS DA BANCADA
+                --     requireStorage = {
+                --         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
+                --         active = true,
+                --         name = 'b13'
+                --     },
+                --     log = '',
+                --     tablePermission = 'perm.b13', -- PERMISSAO PARA ACESSAR A BANCADA
+                --     craftPermission = 'perm.liderb13', -- PERMISSAO PARA CRAFTAR ITEM
+                --     drawMarker = function(coords, dist)
+                --         if dist <= 5.0 then
+                --             DrawText3Ds(
+                --                 coords.x,
+                --                 coords.y,
+                --                 coords.z + 0.1,
+                --         MENSAGEM_BANCADA
+                --     )
+                --     DrawMarker(
+                --         27,
+                --         coords.x,
+                --         coords.y,
+                --         coords.z - 0.95,
+                --         0,
+                --         0,
+                --         0,
+                --         0,
+                --         0,
+                --         0,
+                --         1.5,
+                --         1.5,
+                --         1.5,
+                --         243,
+                --         5,
+                --         72,
+                --         180,
+                --         0,
+                --         0,
+                --         0,
+                --         1
+                --             )
+                --         end
+                --     end -- BLIP DO CHAO
+                -- }
         }, -- FIM DE UMA BANCADA
 
     }, -- FIM DA  CONFIGURACAO
@@ -1539,65 +1539,65 @@ Config = {
         },
         locations = {
             -- LOCALIZACOES DESSAS BANCADAS
-            {
-                -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
-                name = 'furiarjCustom',
-                coords = vec3(-723.3,-1517.77,5.09), -- COORDENADAS DA BANCADA
-                requireStorage = {
-                    -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
-                    active = true,
-                    name = 'furiarjCustom'
-                },
-                log = '',
-                tablePermission = 'mecanico.permissao', -- PERMISSAO PARA ACESSAR A BANCADA
-                craftPermission = 'perm.lidermecanica', -- PERMISSAO PARA CRAFTAR ITEM
-                drawMarker = function(coords, dist)
-                    if dist <= 5.0 then
-                        DrawText3Ds(
-                            coords.x,
-                            coords.y,
-                            coords.z + 0.1,
-                        MENSAGEM_BANCADA
-                    )
-                    DrawMarker(
-                        27,
-                        coords.x,
-                        coords.y,
-                        coords.z - 0.95,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        1.5,
-                        1.5,
-                        1.5,
-                        243,
-                        5,
-                        72,
-                        180,
-                        0,
-                        0,
-                        0,
-                        1
-                        )
-                    end
-                end -- BLIP DO CHAO
-            },
+            -- {
+            --     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
+            --     name = 'furiarjCustom',
+            --     coords = vec3(-723.3,-1517.77,5.09), -- COORDENADAS DA BANCADA
+            --     requireStorage = {
+            --         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
+            --         active = true,
+            --         name = 'furiarjCustom'
+            --     },
+            --     log = '',
+            --     tablePermission = 'mecanico.permissao', -- PERMISSAO PARA ACESSAR A BANCADA
+            --     craftPermission = 'perm.lidermecanica', -- PERMISSAO PARA CRAFTAR ITEM
+            --     drawMarker = function(coords, dist)
+            --         if dist <= 5.0 then
+            --             DrawText3Ds(
+            --                 coords.x,
+            --                 coords.y,
+            --                 coords.z + 0.1,
+            --             MENSAGEM_BANCADA
+            --         )
+            --         DrawMarker(
+            --             27,
+            --             coords.x,
+            --             coords.y,
+            --             coords.z - 0.95,
+            --             0,
+            --             0,
+            --             0,
+            --             0,
+            --             0,
+            --             0,
+            --             1.5,
+            --             1.5,
+            --             1.5,
+            --             243,
+            --             5,
+            --             72,
+            --             180,
+            --             0,
+            --             0,
+            --             0,
+            --             1
+            --             )
+            --         end
+            --     end -- BLIP DO CHAO
+            -- },
 
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
-                name = 'StreetRacing',
-                coords = vec3(817.5,-955.6,22.09), -- COORDENADAS DA BANCADA
+                name = 'ThunderCustom',
+                coords = vec3(938.96,-1055.09,40.84), -- COORDENADAS DA BANCADA
                 requireStorage = {
                     -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                     active = true,
-                    name = 'StreetRacing'
+                    name = 'ThunderCustom'
                 },
                 log = '',
-                tablePermission = 'mecanico.permissao', -- PERMISSAO PARA ACESSAR A BANCADA
-                craftPermission = 'perm.lidermec2', -- PERMISSAO PARA CRAFTAR ITEM
+                tablePermission = 'perm.mecanica', -- PERMISSAO PARA ACESSAR A BANCADA
+                craftPermission = 'perm.lidermecanica', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
                     if dist <= 5.0 then
                         DrawText3Ds(
@@ -1652,13 +1652,13 @@ Config = {
             }
         },
         {
-            item = 'militec', -- SPAWN DO ITEM
+            item = 'burflex', -- SPAWN DO ITEM
             amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-            itemTime = 20, -- 30 segundo(s) para a maquina concluir o craft.
+            itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
             requires = {
                 -- ITENS NECESSARIOS PARA O CRAFT
-                { item = "fita_de_pano" , amount = 5 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                { item = "elastico" , amount = 5 }  
+                { item = "fita_de_pano" , amount = 4 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                { item = "elastico" , amount = 4 }  
             }
         }
     },
@@ -2033,7 +2033,7 @@ locations = {
     {
         -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
         name = 'Argentina',
-        coords = vec3(345.67,-2018.8,22.39), -- COORDENADAS DA BANCADA
+        coords = vec3(336.31,-2015.06,22.39), -- COORDENADAS DA BANCADA
         requireStorage = {
             -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
             active = true,
@@ -2202,7 +2202,7 @@ locations = {
     {
         -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
         name = 'Brasil',
-        coords = vec3(-1616.69,4728.86,53.68), -- COORDENADAS DA BANCADA
+        coords = vec3(-1618.85,4731.91,53.68), -- COORDENADAS DA BANCADA
         requireStorage = {
             -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
             active = true,
@@ -2262,10 +2262,10 @@ locations = {
                 itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
-                    { item = "c-cobre" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                    { item = "c-ferro" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
                     { item = "c-fio" , amount = 30 },
                     { item = "polvora" , amount = 30 },
-                    { item = "aluminio" , amount = 30 } 
+                    -- { item = "aluminio" , amount = 30 } 
                 }
             },
             {
@@ -2274,20 +2274,20 @@ locations = {
                 itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
-                    { item = "ferro" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "aluminio" , amount = 50 }
+                    { item = "c-ferro" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                    { item = "c-cobre" , amount = 50 }
                 }
             },
-            {
-                item = 'pendrive', -- SPAWN DO ITEM
-                amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
-                requires = {
-                    -- ITENS NECESSARIOS PARA O CRAFT
-                    { item = "plastico" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "c-cobre" , amount = 30 }
-                }
-            },
+            -- {
+            --     item = 'pendrive', -- SPAWN DO ITEM
+            --     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
+            --     itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+            --     requires = {
+            --         -- ITENS NECESSARIOS PARA O CRAFT
+            --         { item = "plastico" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+            --         { item = "c-cobre" , amount = 30 }
+            --     }
+            -- },
             {
                 item = 'algemas', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
@@ -2327,39 +2327,7 @@ locations = {
                         {item = 'c-cobre', minAmount = 10, maxAmount = 15},
                         {item = 'c-fio', minAmount = 10, maxAmount = 15},
                         {item = 'polvora', minAmount = 10, maxAmount = 15},
-                        {item = 'aluminio', minAmount = 10, maxAmount = 15},
-                    }
-                },
-                {
-                    dangerRoute = {
-                        status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                        percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    },
-                    dominationBonus = {
-                        -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                        status = true, -- Se o sistema ta ativo ou não
-                        zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                        bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    },
-                    itensList = {
-                        {item = 'ferro', minAmount = 10, maxAmount = 15},
-                        {item = 'aluminio', minAmount = 10, maxAmount = 15},
-                    }
-                },
-                {
-                    dangerRoute = {
-                        status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                        percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    },
-                    dominationBonus = {
-                        -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                        status = true, -- Se o sistema ta ativo ou não
-                        zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                        bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    },
-                    itensList = {
-                        {item = 'plastico', minAmount = 10, maxAmount = 15},
-                        {item = 'c-cobre', minAmount = 10, maxAmount = 15},
+                        -- {item = 'aluminio', minAmount = 10, maxAmount = 15},
                     }
                 },
                 {
@@ -2375,25 +2343,63 @@ locations = {
                     },
                     itensList = {
                         {item = 'c-ferro', minAmount = 10, maxAmount = 15},
+                        {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
                         {item = 'm-aco', minAmount = 10, maxAmount = 15},
                     }
                 },
-                {
-                    dangerRoute = {
-                        status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                        percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    },
-                    dominationBonus = {
-                        -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                        status = true, -- Se o sistema ta ativo ou não
-                        zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                        bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    },
-                    itensList = {
-                        {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
-                        {item = 'c-fio', minAmount = 10, maxAmount = 15},
-                    }
-                }
+                -- {
+                --     dangerRoute = {
+                --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                --     },
+                --     dominationBonus = {
+                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                --         status = true, -- Se o sistema ta ativo ou não
+                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                --     },
+                --     itensList = {
+                --         -- {item = 'plastico', minAmount = 10, maxAmount = 15},
+                --         {item = 'c-cobre', minAmount = 10, maxAmount = 15},
+                --         {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
+                --         {item = 'c-fio', minAmount = 10, maxAmount = 15},
+                --     }
+                -- },
+                -- {
+                --     dangerRoute = {
+                --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                --     },
+                --     dominationBonus = {
+                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                --         status = true, -- Se o sistema ta ativo ou não
+                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                --     },
+                --     itensList = {
+                --         -- {item = 'c-ferro', minAmount = 10, maxAmount = 15},
+                --         -- {item = 'm-aco', minAmount = 10, maxAmount = 15},
+                --         -- {item = 'c-fio', minAmount = 10, maxAmount = 15},
+                --     }
+                -- },
+
+
+                -- {
+                --     dangerRoute = {
+                --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                --     },
+                --     dominationBonus = {
+                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                --         status = true, -- Se o sistema ta ativo ou não
+                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                --     },
+                --     itensList = {
+                --         {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
+                --         {item = 'c-fio', minAmount = 10, maxAmount = 15},
+                --     }
+                -- }
             }
         },
         delivery = {
@@ -2482,7 +2488,7 @@ locations = {
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                 name = 'Cv',
-                coords = vec3(-809.39,189.71,72.47), -- COORDENADAS DA BANCADA
+                coords = vec3(3264.66,5104.16,24.04), -- COORDENADAS DA BANCADA
                 requireStorage = {
                     -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                     active = true,
@@ -2529,7 +2535,7 @@ locations = {
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                 name = 'Camorra',
-                coords = vec3(3258.36,5104.66,24.04), -- COORDENADAS DA BANCADA
+                coords = vec3(-802.66,168.82,72.82), -- COORDENADAS DA BANCADA
                 requireStorage = {
                     -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                     active = true,
@@ -2575,7 +2581,7 @@ locations = {
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                 name = 'Mexico',
-                coords = vec3(2286.81,2392.03,67.75), -- COORDENADAS DA BANCADA
+                coords = vec3(2286.94,2306.58,72.47), -- COORDENADAS DA BANCADA
                 requireStorage = {
                     -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                     active = true,
@@ -2621,7 +2627,7 @@ locations = {
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                 name = 'Jamaica',
-                coords = vec3(-515.68,2977.68,26.82), -- COORDENADAS DA BANCADA
+                coords = vec3(-525.16,2992.71,27.57), -- COORDENADAS DA BANCADA
                 requireStorage = {
                     -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                     active = true,
@@ -2667,7 +2673,7 @@ locations = {
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                 name = 'Australia',
-                coords = vec3(867.68,2853.78,60.15), -- COORDENADAS DA BANCADA
+                coords = vec3(862.13,2855.0,60.15), -- COORDENADAS DA BANCADA
                 requireStorage = {
                     -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                     active = true,
@@ -2860,7 +2866,7 @@ locations = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Tequila',
-                    coords = vec3(-1034.53,313.71,71.66), -- COORDENADAS DA BANCADA
+                    coords = vec3(-571.66,289.06,79.18), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -2953,7 +2959,7 @@ locations = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Iluminatis',
-                    coords = vec3(-571.71,288.94,79.18), -- COORDENADAS DA BANCADA
+                    coords = vec3(-2993.47,56.0,7.95), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -2999,7 +3005,7 @@ locations = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Cassino',
-                    coords = vec3(963.24,23.74,76.99), -- COORDENADAS DA BANCADA
+                    coords = vec3(963.31,23.98,77.09), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -3237,65 +3243,59 @@ locations = {
         -----------CONTRABANDO-------------
         ['Cv'] = {
             itens = {
-                ['c-cobre'] = 9999999, 
+                ['c-ferro'] = 9999999,
                 ['c-fio'] = 9999999, 
                 ['polvora'] = 9999999, 
-                ['aluminio'] = 9999999, 
-                ['ferro'] = 9999999, 
-                ['plastico'] = 9999999,
-                ['c-ferro'] = 9999999,
+                ['c-cobre'] = 9999999, 
                 ['m-aco'] = 9999999,
                 ['pacote_tecido'] = 9999999,
             }
         },
         ['Camorra'] = {
             itens = {
-                ['c-cobre'] = 9999999, 
+                ['c-ferro'] = 9999999,
                 ['c-fio'] = 9999999, 
                 ['polvora'] = 9999999, 
-                ['aluminio'] = 9999999, 
-                ['ferro'] = 9999999, 
-                ['plastico'] = 9999999,
-                ['c-ferro'] = 9999999,
+                ['c-cobre'] = 9999999, 
                 ['m-aco'] = 9999999,
                 ['pacote_tecido'] = 9999999,
             }
         },
         ['Mexico'] = {
             itens = {
-                ['c-cobre'] = 9999999, 
+                ['c-ferro'] = 9999999,
                 ['c-fio'] = 9999999, 
                 ['polvora'] = 9999999, 
-                ['aluminio'] = 9999999, 
-                ['ferro'] = 9999999, 
-                ['plastico'] = 9999999,
-                ['c-ferro'] = 9999999,
+                ['c-cobre'] = 9999999, 
                 ['m-aco'] = 9999999,
                 ['pacote_tecido'] = 9999999,
             }
         },
         ['Jamaica'] = {
             itens = {
-                ['c-cobre'] = 9999999, 
+                ['c-ferro'] = 9999999,
                 ['c-fio'] = 9999999, 
                 ['polvora'] = 9999999, 
-                ['aluminio'] = 9999999, 
-                ['ferro'] = 9999999, 
-                ['plastico'] = 9999999,
-                ['c-ferro'] = 9999999,
+                ['c-cobre'] = 9999999, 
                 ['m-aco'] = 9999999,
                 ['pacote_tecido'] = 9999999,
             }
         },
         ['Australia'] = {
             itens = {
-                ['c-cobre'] = 9999999, 
+                -- ['c-cobre'] = 9999999, 
+                -- ['c-fio'] = 9999999, 
+                -- ['polvora'] = 9999999, 
+                -- ['aluminio'] = 9999999, 
+                -- ['ferro'] = 9999999, 
+                -- ['plastico'] = 9999999,
+                -- ['c-ferro'] = 9999999,
+                -- ['m-aco'] = 9999999,
+                -- ['pacote_tecido'] = 9999999,
+                ['c-ferro'] = 9999999,
                 ['c-fio'] = 9999999, 
                 ['polvora'] = 9999999, 
-                ['aluminio'] = 9999999, 
-                ['ferro'] = 9999999, 
-                ['plastico'] = 9999999,
-                ['c-ferro'] = 9999999,
+                ['c-cobre'] = 9999999, 
                 ['m-aco'] = 9999999,
                 ['pacote_tecido'] = 9999999,
             }
@@ -3386,7 +3386,7 @@ locations = {
         },
     
         ------------- MECANICA --------------
-        ['furiarjCustom'] = {
+        ['ThunderCustom'] = {
             itens = {
                 ['plastico'] = 9999999, 
                 ['metal'] = 9999999, 

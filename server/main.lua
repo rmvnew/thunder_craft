@@ -311,42 +311,35 @@ src.storageItemAll = function(type, id)
         local depositou = false
         local temp = os.date("*t", os.time())
         
+        -- Carregar itens do banco de dados
+        local value = {}
+        if #query > 0 then
+            value = json.decode(query[1].itens) or {}
+        end
+
         -- Processamento de itens
         for k, v in pairs(Config.Storages[info['locations'][id].requireStorage.name].itens) do
             local amount = vRP.getInventoryItemAmount(user_id, k)
             if amount > 0 and vRP.tryGetInventoryItem(user_id, k, amount, true) then
-                if storage[k] then
-                    storage[k] = parseInt(storage[k]) + amount
-                else
-                    storage[k] = amount
-                end
+                -- Atualiza o armazenamento
+                storage[k] = (storage[k] or 0) + amount
                 depositou = true
                 
-                -- Atualização dos itens no banco de dados
-                if #query > 0 then
-                    local value = json.decode(query[1].itens)
-                    if value[k] then
-                        value[k] = value[k] + amount
-                    else
-                        value[k] = amount
-                    end
-                    vRP.execute('sjr/setItens', { user_id = user_id, itens = json.encode(value), day = temp.day })
-                else
-                    local value = {}
-                    value[k] = amount
-                    vRP.execute('sjr/setItens', { user_id = user_id, itens = json.encode(value), day = temp.day })
-                end
-                
+                -- Atualiza o banco de dados localmente
+                value[k] = (value[k] or 0) + amount
+
                 -- Registrar log para cada item depositado com sua quantidade
                 local itemName = vRP.getItemName(k)
-                vRP.sendLog("https://discord.com/api/webhooks/1279009445548134400/FKUn1k2R_-JCYRKToWCPAlZZmYpwhq389aBLtVkLpEVK_UIAAL4pZfSD4pyC8UP1jsRK", "O ID "..user_id.." depositou o item: "..itemName.." na quantidade de "..amount)
+                vRP.sendLog("https://discordapp.com/api/webhooks/1337600992006377574/EaSnLFGj_QzwSaGOCMbfbXcWuK99Ddg58eERaZ4hUS-Vf5sfPH_U_APHSkhnS5OknbdP", 
+                            "O ID "..user_id.." depositou o item: "..itemName.." na quantidade de "..amount)
             end
         end
         
-        -- Ações após o depósito
+        -- Salvar tudo de uma vez no banco de dados
         if depositou then
-            TriggerClientEvent('Notify', source, 'sucesso', "Itens guardados com sucesso.", 5000)
+            vRP.execute('sjr/setItens', { user_id = user_id, itens = json.encode(value), day = temp.day })
             vRP.setSData('Storage:'..info['locations'][id].requireStorage.name, json.encode(storage))
+            TriggerClientEvent('Notify', source, 'sucesso', "Itens guardados com sucesso.", 5000)
             return true
         end
     end
