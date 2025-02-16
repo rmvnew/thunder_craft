@@ -1189,6 +1189,15 @@ Config = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "ferro" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
                     }
+                },
+                {
+                    item = 'vale_carro', -- SPAWN DO ITEM
+                    amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 7200, -- 30 segundo(s) para a maquina concluir o craft.
+                    requires = {
+                        -- ITENS NECESSARIOS PARA O CRAFT
+                        { item = "pecas_de_carro" , amount = 800 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                    }
                 }
                 
             },
@@ -1392,7 +1401,7 @@ Config = {
                {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Lacoste',
-                    coords = vec3(-227.84,-1327.29,30.89), -- COORDENADAS DA BANCADA
+                    coords = vec3(-202.78,-1339.01,30.89), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -2278,16 +2287,17 @@ locations = {
                     { item = "c-cobre" , amount = 50 }
                 }
             },
-            -- {
-            --     item = 'pendrive', -- SPAWN DO ITEM
-            --     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-            --     itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
-            --     requires = {
-            --         -- ITENS NECESSARIOS PARA O CRAFT
-            --         { item = "plastico" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-            --         { item = "c-cobre" , amount = 30 }
-            --     }
-            -- },
+            {
+                item = 'mochila_x', -- SPAWN DO ITEM
+                amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
+                itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                requires = {
+                    -- ITENS NECESSARIOS PARA O CRAFT
+                    { item = "plastico" , amount = 30 }, 
+                    { item = "pacote_tecido" , amount = 40 }, 
+                    { item = "c-fio" , amount = 40 }
+                }
+            },
             {
                 item = 'algemas', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
@@ -3346,6 +3356,7 @@ locations = {
         ------------- DESMANCHE --------------
         ['MotoClub'] = {
             itens = {
+                ['pecas_de_carro'] = 9999999, 
                 ['ferro'] = 9999999, 
                 ['aluminio'] = 9999999, 
                 ['molas'] = 9999999, 
@@ -3354,6 +3365,7 @@ locations = {
         },
         ['Furious'] = {
             itens = {
+                ['pecas_de_carro'] = 9999999, 
                 ['ferro'] = 9999999, 
                 ['aluminio'] = 9999999, 
                 ['molas'] = 9999999, 
@@ -3362,28 +3374,14 @@ locations = {
         },
         ['Lacoste'] = {
             itens = {
+                ['pecas_de_carro'] = 9999999, 
                 ['ferro'] = 9999999, 
                 ['aluminio'] = 9999999, 
                 ['molas'] = 9999999, 
                 ['plastico'] = 9999999
             }
         },
-        ['b13'] = {
-            itens = {
-                ['ferro'] = 9999999, 
-                ['aluminio'] = 9999999, 
-                ['molas'] = 9999999, 
-                ['plastico'] = 9999999
-            }
-        },
-        ['Cartel'] = {
-            itens = {
-                ['ferro'] = 9999999, 
-                ['aluminio'] = 9999999, 
-                ['molas'] = 9999999, 
-                ['plastico'] = 9999999
-            }
-        },
+       
     
         ------------- MECANICA --------------
         ['ThunderCustom'] = {
