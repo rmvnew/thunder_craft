@@ -13,123 +13,102 @@ Config = {
                 {
                     item = 'WEAPON_SNSPISTOL_MK2', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 25, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "pecadearma" , amount = 20 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "gatilho" , amount = 1 },  
                         { item = "molas" , amount = 6 },  
-                        { item = "metal" , amount = 6 }
+                        { item = "metal" , amount = 15 }
                     }
                 },
                 {
                     item = 'WEAPON_PISTOL_MK2', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 20, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 35, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "pecadearma" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "gatilho" , amount = 1 },  
+                        { item = "pecadearma" , amount = 35 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
                         { item = "molas" , amount = 10 },  
-                        { item = "metal" , amount = 10 }
+                        { item = "metal" , amount = 30 }
                     }
                 },
                 {
                     item = 'WEAPON_MACHINEPISTOL', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 20, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 35, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "pecadearma" , amount = 150 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "gatilho" , amount = 1 },  
-                        { item = "molas" , amount = 20 },  
-                        { item = "metal" , amount = 20 }
+                        { item = "molas" , amount = 40 },  
+                        { item = "metal" , amount = 45 }
                     }
                 },
                 {
                     item = 'WEAPON_SMG', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 30, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 40, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "pecadearma" , amount = 150 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "gatilho" , amount = 1 },  
-                        { item = "molas" , amount = 15 },  
-                        { item = "metal" , amount = 15 }
+                        { item = "molas" , amount = 40 },  
+                        { item = "metal" , amount = 45 }
                     }
                 },
                 {
                     item = 'WEAPON_ASSAULTRIFLE', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 35, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 45, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "pecadearma" , amount = 150 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "gatilho" , amount = 1 },  
-                        { item = "molas" , amount = 15 },  
-                        { item = "metal" , amount = 15 }
+                        { item = "molas" , amount = 40 },  
+                        { item = "metal" , amount = 45 }
                     }
                 },
                 {
                     item = 'WEAPON_ASSAULTRIFLE_MK2', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 40, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 65, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "pecadearma" , amount = 200 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "gatilho" , amount = 1 },  
-                        { item = "molas" , amount = 20 },  
-                        { item = "metal" , amount = 20 }
+                        { item = "molas" , amount = 40 },  
+                        { item = "metal" , amount = 45 }
                     }
                 },
                 {
                     item = 'WEAPON_SPECIALCARBINE_MK2', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 45, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 75, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "pecadearma" , amount = 200 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "gatilho" , amount = 1 },  
-                        { item = "molas" , amount = 20 },  
-                        { item = "metal" , amount = 20 }
+                        { item = "pecadearma" , amount = 200 }, -- ITEM / QUANTIDADE ( POR UNIDADE ) 
+                        { item = "molas" , amount = 110 },  
+                        { item = "metal" , amount = 120 }
                     }
                 }
             },
             farm = {
                 -- ZONA DE FARM
                 list = {
-                    {
-                        dangerRoute = {
-                            status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                            percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                        },
-                        dominationBonus = {
-                            -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                            status = true, -- Se o sistema ta ativo ou não
-                            zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                            bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                        },
-                        itensList = {
-                            {item = 'molas', minAmount = 20, maxAmount = 25},
-                            {item = 'metal', minAmount = 20, maxAmount = 25},
-                            {item = 'gatilho', minAmount = 5, maxAmount = 10},
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                            percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                        },
-                        dominationBonus = {
-                            -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                            status = true, -- Se o sistema ta ativo ou não
-                            zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                            bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                        },
-                        itensList = {
-                            {item = 'pecadearma', minAmount = 50, maxAmount = 60}
-                        }
-                    }
+                    -- {
+                    --     dangerRoute = {
+                    --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                    --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                    --     },
+                    --     dominationBonus = {
+                    --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                    --         status = true, -- Se o sistema ta ativo ou não
+                    --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                    --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                    --     },
+                    --     itensList = {
+                    --         {item = 'molas', minAmount = 20, maxAmount = 25},
+                    --         {item = 'metal', minAmount = 20, maxAmount = 25},
+                    --         {item = 'pecadearma', minAmount = 5, maxAmount = 10},
+                    --     }
+                    -- },
+                    
                 }
             },
             delivery = {
@@ -637,18 +616,18 @@ Config = {
                 -- ZONA DE CRAFT
                 {
                     item = 'AMMO_SNSPISTOL_MK2', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "capsulas" , amount = 40 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "polvora" , amount = 40 }  
+                        { item = "capsulas" , amount = 45 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                        { item = "polvora" , amount = 45 }  
                     }
                 },
                 {
                     item = 'AMMO_PISTOL_MK2', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 20, -- 30 segundo(s) para a maquina concluir o craft.
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.-- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "capsulas" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
@@ -657,8 +636,18 @@ Config = {
                 },
                 {
                     item = 'AMMO_MACHINEPISTOL', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                    requires = {
+                        -- ITENS NECESSARIOS PARA O CRAFT
+                        { item = "capsulas" , amount = 55 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                        { item = "polvora" , amount = 55 }  
+                    }
+                },
+                {
+                    item = 'AMMO_SMG', -- SPAWN DO ITEM
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "capsulas" , amount = 60 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
@@ -666,9 +655,19 @@ Config = {
                     }
                 },
                 {
-                    item = 'AMMO_SMG', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    item = 'AMMO_MICROSMG', -- SPAWN DO ITEM
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                    requires = {
+                        -- ITENS NECESSARIOS PARA O CRAFT
+                        { item = "capsulas" , amount = 60 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                        { item = "polvora" , amount = 60 }  
+                    }
+                },
+                {
+                    item = 'AMMO_PUMPSHOTGUN_MK2', -- SPAWN DO ITEM
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "capsulas" , amount = 70 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
@@ -676,29 +675,9 @@ Config = {
                     }
                 },
                 {
-                    item = 'AMMO_MICROSMG', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
-                    requires = {
-                        -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "capsulas" , amount = 80 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "polvora" , amount = 80 }  
-                    }
-                },
-                {
-                    item = 'AMMO_PUMPSHOTGUN_MK2', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
-                    requires = {
-                        -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "capsulas" , amount = 120 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "polvora" , amount = 120 }  
-                    }
-                },
-                {
                     item = 'AMMO_ASSAULTRIFLE', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "capsulas" , amount = 80 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
@@ -707,45 +686,45 @@ Config = {
                 },
                 {
                     item = 'AMMO_ASSAULTRIFLE_MK2', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "capsulas" , amount = 80 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "polvora" , amount = 80 }  
+                        { item = "capsulas" , amount = 85 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                        { item = "polvora" , amount = 85 }  
                     }
                 },
                 {
                     item = 'AMMO_SPECIALCARBINE_MK2', -- SPAWN DO ITEM
-                    amount = 50, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    amount = 10, -- Quantidade de item que vai receber por unidade selecionada.
+                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "capsulas" , amount = 80 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "polvora" , amount = 80 }  
+                        { item = "capsulas" , amount = 90 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                        { item = "polvora" , amount = 90 }  
                     }
                 }
             },
             farm = {
                 -- ZONA DE FARM
                 list = {
-                    {
-                        dangerRoute = {
-                            status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                            percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                        },
-                        dominationBonus = {
-                            -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                            status = true, -- Se o sistema ta ativo ou não
-                            zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                            bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                        },
-                        itensList = {
-                            {item = 'capsulas', minAmount = 20, maxAmount = 30},
-                            {item = 'polvora', minAmount = 20, maxAmount = 30}
+                    -- {
+                    --     dangerRoute = {
+                    --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                    --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                    --     },
+                    --     dominationBonus = {
+                    --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                    --         status = true, -- Se o sistema ta ativo ou não
+                    --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                    --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                    --     },
+                    --     itensList = {
+                    --         {item = 'capsulas', minAmount = 20, maxAmount = 30},
+                    --         {item = 'polvora', minAmount = 20, maxAmount = 30}
 
-                        }
-                    }
+                    --     }
+                    -- }
                 }
             },
             delivery = {
@@ -1063,7 +1042,7 @@ Config = {
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Canada',
-                    coords = vec3(-136.56,-1610.79,35.03), -- COORDENADAS DA BANCADA
+                    coords = vec3(2515.22,4098.86,35.59), -- COORDENADAS DA BANCADA
                     requireStorage = {
                         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                         active = true,
@@ -1164,7 +1143,7 @@ Config = {
                 {
                     item = 'lockpick', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "ferro" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
@@ -1174,7 +1153,7 @@ Config = {
                 {
                     item = 'chave', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "ferro" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
@@ -1184,10 +1163,11 @@ Config = {
                 {
                     item = 'pedecabra', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 5, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 30, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
                         { item = "ferro" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                        { item = "aluminio" , amount = 25 }  
                     }
                 },
                 {
@@ -1204,23 +1184,23 @@ Config = {
             farm = {
                 -- ZONA DE FARM
                 list = {
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                            percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                        },
-                        dominationBonus = {
-                            -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                            status = true, -- Se o sistema ta ativo ou não
-                            zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                            bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                        },
-                        itensList = {
-                            {item = 'ferro', minAmount = 40, maxAmount = 50},
-                            {item = 'aluminio', minAmount = 20, maxAmount = 30},
-                            {item = 'plastico', minAmount = 20, maxAmount = 30},
-                        }
-                    }
+                    -- {
+                    --     dangerRoute = {
+                    --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                    --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                    --     },
+                    --     dominationBonus = {
+                    --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                    --         status = true, -- Se o sistema ta ativo ou não
+                    --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                    --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                    --     },
+                    --     itensList = {
+                    --         {item = 'ferro', minAmount = 40, maxAmount = 50},
+                    --         {item = 'aluminio', minAmount = 20, maxAmount = 30},
+                    --         {item = 'plastico', minAmount = 20, maxAmount = 30},
+                    --     }
+                    -- }
                 }
             },
             delivery = {
@@ -1501,44 +1481,47 @@ Config = {
             {
                 item = 'repairkit', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                itemTime = 25, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
-                    { item = "metal" , amount = 8 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "plastico" , amount = 8 }  
+                    { item = "metal" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                    { item = "plastico" , amount = 30 },
+                    { item = "c-fio" , amount = 30 },
+                    
                 }
             },
             {
                 item = 'rastreador', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 20, -- 30 segundo(s) para a maquina concluir o craft.
+                itemTime = 30, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
-                    { item = "plastico" , amount = 8 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "c-cobre" , amount = 8 }  
+                    { item = "metal" , amount = 40 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                    { item = "plastico" , amount = 40 },
+                    { item = "c-fio" , amount = 40 },
                 }
             }
         },
         farm = {
             -- ZONA DE FARM
             list = {
-                {
-                    dangerRoute = {
-                        status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                        percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    },
-                    dominationBonus = {
-                        -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                        status = true, -- Se o sistema ta ativo ou não
-                        zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                        bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    },
-                    itensList = {
-                        {item = 'plastico', minAmount = 5, maxAmount = 8},
-                        {item = 'metal', minAmount = 5, maxAmount = 8},
-                        {item = 'c-cobre', minAmount = 5, maxAmount = 8}
-                    }
-                }
+                -- {
+                --     dangerRoute = {
+                --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                --     },
+                --     dominationBonus = {
+                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                --         status = true, -- Se o sistema ta ativo ou não
+                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                --     },
+                --     itensList = {
+                --         {item = 'plastico', minAmount = 5, maxAmount = 8},
+                --         {item = 'metal', minAmount = 5, maxAmount = 8},
+                --         {item = 'c-cobre', minAmount = 5, maxAmount = 8}
+                --     }
+                -- }
             }
         },
         delivery = {
@@ -1653,11 +1636,12 @@ Config = {
         {
             item = 'bandagem', -- SPAWN DO ITEM
             amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-            itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+            itemTime = 25, -- 30 segundo(s) para a maquina concluir o craft.
             requires = {
                 -- ITENS NECESSARIOS PARA O CRAFT
-                { item = "fita_de_pano" , amount = 8 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                { item = "elastico" , amount = 8 }  
+                { item = "fita_de_pano" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                { item = "elastico" , amount = 30 },  
+                { item = "anestesico" , amount = 30 },  
             }
         },
         {
@@ -1666,30 +1650,31 @@ Config = {
             itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
             requires = {
                 -- ITENS NECESSARIOS PARA O CRAFT
-                { item = "fita_de_pano" , amount = 4 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                { item = "elastico" , amount = 4 }  
+                { item = "fita_de_pano" , amount = 20 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                { item = "elastico" , amount = 20 },  
+                { item = "anestesico" , amount = 20 },  
             }
         }
     },
     farm = {
         -- ZONA DE FARM
         list = {
-            {
-                dangerRoute = {
-                    status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                    percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                },
-                dominationBonus = {
-                    -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                    status = true, -- Se o sistema ta ativo ou não
-                    zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                    bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                },
-                itensList = {
-                    {item = 'fita_de_pano', minAmount = 5, maxAmount = 8},
-                    {item = 'elastico', minAmount = 5, maxAmount = 8}
-                }
-            }
+            -- {
+            --     dangerRoute = {
+            --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+            --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+            --     },
+            --     dominationBonus = {
+            --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+            --         status = true, -- Se o sistema ta ativo ou não
+            --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+            --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+            --     },
+            --     itensList = {
+            --         {item = 'fita_de_pano', minAmount = 5, maxAmount = 8},
+            --         {item = 'elastico', minAmount = 5, maxAmount = 8}
+            --     }
+            -- }
         }
     },
     delivery = {
@@ -1756,7 +1741,7 @@ Config = {
         -- ZONA DE CRAFT
         {
             item = 'lsd', -- SPAWN DO ITEM
-            amount = 20, -- Quantidade de item que vai receber por unidade selecionada.
+            amount = 15, -- Quantidade de item que vai receber por unidade selecionada.
             itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
             requires = {
                 -- ITENS NECESSARIOS PARA O CRAFT
@@ -1768,22 +1753,22 @@ Config = {
     farm = {
         -- ZONA DE FARM
         list = {
-            {
-                dangerRoute = {
-                    status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                    percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                },
-                dominationBonus = {
-                    -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                    status = true, -- Se o sistema ta ativo ou não
-                    zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                    bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                },
-                itensList = {
-                    {item = 'acidolsd', minAmount = 10, maxAmount = 15},
-                    {item = 'pastabase', minAmount = 10, maxAmount = 15},
-                }
-            }
+            -- {
+            --     dangerRoute = {
+            --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+            --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+            --     },
+            --     dominationBonus = {
+            --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+            --         status = true, -- Se o sistema ta ativo ou não
+            --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+            --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+            --     },
+            --     itensList = {
+            --         {item = 'acidolsd', minAmount = 10, maxAmount = 15},
+            --         {item = 'pastabase', minAmount = 10, maxAmount = 15},
+            --     }
+            -- }
         }
     },
     delivery = {
@@ -1926,7 +1911,7 @@ craft = {
     -- ZONA DE CRAFT
     {
         item = 'opio', -- SPAWN DO ITEM
-        amount = 20, -- Quantidade de item que vai receber por unidade selecionada.
+        amount = 15, -- Quantidade de item que vai receber por unidade selecionada.
         itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
         requires = {
             -- ITENS NECESSARIOS PARA O CRAFT
@@ -1938,22 +1923,22 @@ craft = {
 farm = {
     -- ZONA DE FARM
     list = {
-        {
-            dangerRoute = {
-                status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-            },
-            dominationBonus = {
-                -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                status = true, -- Se o sistema ta ativo ou não
-                zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-            },
-            itensList = {
-                {item = 'opiopapoula', minAmount = 10, maxAmount = 15},
-                {item = 'pastabase', minAmount = 10, maxAmount = 15},
-            }
-        }
+        -- {
+        --     dangerRoute = {
+        --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+        --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+        --     },
+        --     dominationBonus = {
+        --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+        --         status = true, -- Se o sistema ta ativo ou não
+        --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+        --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+        --     },
+        --     itensList = {
+        --         {item = 'opiopapoula', minAmount = 10, maxAmount = 15},
+        --         {item = 'pastabase', minAmount = 10, maxAmount = 15},
+        --     }
+        -- }
     }
 },
 delivery = {
@@ -2042,7 +2027,7 @@ locations = {
     {
         -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
         name = 'Argentina',
-        coords = vec3(336.31,-2015.06,22.39), -- COORDENADAS DA BANCADA
+        coords = vec3(-1792.21,-209.51,64.7), -- COORDENADAS DA BANCADA
         requireStorage = {
             -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
             active = true,
@@ -2095,7 +2080,7 @@ craft = {
     -- ZONA DE CRAFT
     {
         item = 'maconha', -- SPAWN DO ITEM
-        amount = 20, -- Quantidade de item que vai receber por unidade selecionada.
+        amount = 15, -- Quantidade de item que vai receber por unidade selecionada.
         itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
         requires = {
             -- ITENS NECESSARIOS PARA O CRAFT
@@ -2107,22 +2092,22 @@ craft = {
 farm = {
     -- ZONA DE FARM
     list = {
-        {
-            dangerRoute = {
-                status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-            },
-            dominationBonus = {
-                -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                status = true, -- Se o sistema ta ativo ou não
-                zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-            },
-            itensList = {
-                {item = 'folhamaconha', minAmount = 10, maxAmount = 15},
-                {item = 'plastico', minAmount = 10, maxAmount = 15},
-            }
-        }
+        -- {
+        --     dangerRoute = {
+        --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+        --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+        --     },
+        --     dominationBonus = {
+        --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+        --         status = true, -- Se o sistema ta ativo ou não
+        --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+        --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+        --     },
+        --     itensList = {
+        --         {item = 'folhamaconha', minAmount = 10, maxAmount = 15},
+        --         {item = 'plastico', minAmount = 10, maxAmount = 15},
+        --     }
+        -- }
     }
 },
 delivery = {
@@ -2267,100 +2252,61 @@ locations = {
             -- ZONA DE CRAFT
             {
                 item = 'c4', -- SPAWN DO ITEM
-                amount = 2, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
+                itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
                     { item = "c-ferro" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "c-fio" , amount = 30 },
-                    { item = "polvora" , amount = 30 },
-                    -- { item = "aluminio" , amount = 30 } 
+                    { item = "kit_pirotecnico" , amount = 30 }
                 }
             },
             {
                 item = 'placa', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                itemTime = 20, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
                     { item = "c-ferro" , amount = 50 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "c-cobre" , amount = 50 }
                 }
             },
             {
                 item = 'mochila_x', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                itemTime = 30, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
-                    { item = "plastico" , amount = 30 }, 
-                    { item = "pacote_tecido" , amount = 40 }, 
-                    { item = "c-fio" , amount = 40 }
+                    { item = "pacote_tecido" , amount = 50 }, 
+                    { item = "c-ferro" , amount = 40 }
                 }
             },
             {
                 item = 'algemas', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                itemTime = 20, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
-                    { item = "c-ferro" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "m-aco" , amount = 30 }  
+                    { item = "c-ferro" , amount = 40 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                    
                 }
             },
             {
                 item = 'corda', -- SPAWN DO ITEM
                 amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+                itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
                 requires = {
                     -- ITENS NECESSARIOS PARA O CRAFT
                     { item = "pacote_tecido" , amount = 40 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                    { item = "c-fio" , amount = 40 }
+
                 }
             }
         },
         farm = {
             -- ZONA DE FARM
             list = {
-                {
-                    dangerRoute = {
-                        status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                        percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    },
-                    dominationBonus = {
-                        -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                        status = true, -- Se o sistema ta ativo ou não
-                        zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                        bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    },
-                    itensList = {
-                        {item = 'c-cobre', minAmount = 10, maxAmount = 15},
-                        {item = 'c-fio', minAmount = 10, maxAmount = 15},
-                        {item = 'polvora', minAmount = 10, maxAmount = 15},
-                        -- {item = 'aluminio', minAmount = 10, maxAmount = 15},
-                    }
-                },
-                {
-                    dangerRoute = {
-                        status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                        percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    },
-                    dominationBonus = {
-                        -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                        status = true, -- Se o sistema ta ativo ou não
-                        zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                        bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    },
-                    itensList = {
-                        {item = 'c-ferro', minAmount = 10, maxAmount = 15},
-                        {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
-                        {item = 'm-aco', minAmount = 10, maxAmount = 15},
-                    }
-                },
                 -- {
                 --     dangerRoute = {
-                --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
                 --     },
                 --     dominationBonus = {
                 --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
@@ -2369,10 +2315,10 @@ locations = {
                 --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
                 --     },
                 --     itensList = {
-                --         -- {item = 'plastico', minAmount = 10, maxAmount = 15},
                 --         {item = 'c-cobre', minAmount = 10, maxAmount = 15},
-                --         {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
                 --         {item = 'c-fio', minAmount = 10, maxAmount = 15},
+                --         {item = 'polvora', minAmount = 10, maxAmount = 15},
+                --         -- {item = 'aluminio', minAmount = 10, maxAmount = 15},
                 --     }
                 -- },
                 -- {
@@ -2387,29 +2333,12 @@ locations = {
                 --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
                 --     },
                 --     itensList = {
-                --         -- {item = 'c-ferro', minAmount = 10, maxAmount = 15},
-                --         -- {item = 'm-aco', minAmount = 10, maxAmount = 15},
-                --         -- {item = 'c-fio', minAmount = 10, maxAmount = 15},
+                --         {item = 'c-ferro', minAmount = 10, maxAmount = 15},
+                --         {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
+                --         {item = 'm-aco', minAmount = 10, maxAmount = 15},
                 --     }
                 -- },
-
-
-                -- {
-                --     dangerRoute = {
-                --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                --     },
-                --     dominationBonus = {
-                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                --         status = true, -- Se o sistema ta ativo ou não
-                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                --     },
-                --     itensList = {
-                --         {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
-                --         {item = 'c-fio', minAmount = 10, maxAmount = 15},
-                --     }
-                -- }
+                
             }
         },
         delivery = {
@@ -2750,11 +2679,11 @@ locations = {
                 {
                     item = 'colete', -- SPAWN DO ITEM
                     amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-                    itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
+                    itemTime = 35, -- 30 segundo(s) para a maquina concluir o craft.
                     requires = {
                         -- ITENS NECESSARIOS PARA O CRAFT
-                        { item = "m-malha" , amount = 45 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
-                        { item = "ferro" , amount = 30 }  
+                        { item = "m-malha" , amount = 75 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                        { item = "ferro" , amount = 90 }  
                     }
                 },
                 {
@@ -2770,26 +2699,26 @@ locations = {
             },
             farm = {
                 -- ZONA DE FARM
-                list = {
-                    {
-                        dangerRoute = {
-                            status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                            percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                        },
-                        dominationBonus = {
-                            -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                            status = true, -- Se o sistema ta ativo ou não
-                            zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                            bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                        },
-                        itensList = {
-                            {item = 'ferro', minAmount = 3, maxAmount = 6},
-                            {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
-                            {item = 'm-malha', minAmount = 20, maxAmount = 30},
-                        }
-                    },
+                -- list = {
+                --     {
+                --         dangerRoute = {
+                --             status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
+                --             percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
+                --         },
+                --         dominationBonus = {
+                --             -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
+                --             status = true, -- Se o sistema ta ativo ou não
+                --             zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
+                --             bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
+                --         },
+                --         itensList = {
+                --             {item = 'ferro', minAmount = 3, maxAmount = 6},
+                --             {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
+                --             {item = 'm-malha', minAmount = 20, maxAmount = 30},
+                --         }
+                --     },
                     
-                }
+                -- }
             },
             delivery = {
                 list = {
@@ -3264,49 +3193,28 @@ locations = {
         ['Camorra'] = {
             itens = {
                 ['c-ferro'] = 9999999,
-                ['c-fio'] = 9999999, 
-                ['polvora'] = 9999999, 
-                ['c-cobre'] = 9999999, 
-                ['m-aco'] = 9999999,
+                ['kit_pirotecnico'] = 9999999, 
                 ['pacote_tecido'] = 9999999,
             }
         },
         ['Mexico'] = {
             itens = {
                 ['c-ferro'] = 9999999,
-                ['c-fio'] = 9999999, 
-                ['polvora'] = 9999999, 
-                ['c-cobre'] = 9999999, 
-                ['m-aco'] = 9999999,
+                ['kit_pirotecnico'] = 9999999, 
                 ['pacote_tecido'] = 9999999,
             }
         },
         ['Jamaica'] = {
             itens = {
                 ['c-ferro'] = 9999999,
-                ['c-fio'] = 9999999, 
-                ['polvora'] = 9999999, 
-                ['c-cobre'] = 9999999, 
-                ['m-aco'] = 9999999,
+                ['kit_pirotecnico'] = 9999999, 
                 ['pacote_tecido'] = 9999999,
             }
         },
         ['Australia'] = {
             itens = {
-                -- ['c-cobre'] = 9999999, 
-                -- ['c-fio'] = 9999999, 
-                -- ['polvora'] = 9999999, 
-                -- ['aluminio'] = 9999999, 
-                -- ['ferro'] = 9999999, 
-                -- ['plastico'] = 9999999,
-                -- ['c-ferro'] = 9999999,
-                -- ['m-aco'] = 9999999,
-                -- ['pacote_tecido'] = 9999999,
                 ['c-ferro'] = 9999999,
-                ['c-fio'] = 9999999, 
-                ['polvora'] = 9999999, 
-                ['c-cobre'] = 9999999, 
-                ['m-aco'] = 9999999,
+                ['kit_pirotecnico'] = 9999999, 
                 ['pacote_tecido'] = 9999999,
             }
         },
