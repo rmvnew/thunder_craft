@@ -827,30 +827,30 @@ Config = {
                                 coords.x,
                                 coords.y,
                                 coords.z + 0.1,
-                                'Pressione ~p~[E]~w~ para acessar a bancada.'
-                            )
-                            DrawMarker(
-                                27,
-                                coords.x,
-                                coords.y,
-                                coords.z - 0.95,
-                                0,
-                                0,
-                                0,
-                                0,
-                                0,
-                                0,
-                                1.5,
-                                1.5,
-                                1.5,
-                                132,
-                                102,
-                                226,
-                                180,
-                                0,
-                                0,
-                                0,
-                                1
+                        MENSAGEM_BANCADA
+                    )
+                    DrawMarker(
+                        27,
+                        coords.x,
+                        coords.y,
+                        coords.z - 0.95,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1.5,
+                        1.5,
+                        1.5,
+                        243,
+                        5,
+                        72,
+                        180,
+                        0,
+                        0,
+                        0,
+                        1
                             )
                         end
                     end -- BLIP DO CHAO
@@ -1580,16 +1580,16 @@ Config = {
 
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
-                name = 'ThunderCustom',
+                name = 'Bennys',
                 coords = vec3(938.96,-1055.09,40.84), -- COORDENADAS DA BANCADA
                 requireStorage = {
                     -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
                     active = true,
-                    name = 'ThunderCustom'
+                    name = 'Bennys'
                 },
                 log = '',
-                tablePermission = 'perm.mecanica', -- PERMISSAO PARA ACESSAR A BANCADA
-                craftPermission = 'perm.lidermecanica', -- PERMISSAO PARA CRAFTAR ITEM
+                tablePermission = 'perm.bennys', -- PERMISSAO PARA ACESSAR A BANCADA
+                craftPermission = 'perm.liderbennys', -- PERMISSAO PARA CRAFTAR ITEM
                 drawMarker = function(coords, dist)
                     if dist <= 5.0 then
                         DrawText3Ds(
@@ -1636,7 +1636,7 @@ Config = {
         {
             item = 'bandagem', -- SPAWN DO ITEM
             amount = 1, -- Quantidade de item que vai receber por unidade selecionada.
-            itemTime = 25, -- 30 segundo(s) para a maquina concluir o craft.
+            itemTime = 15, -- 30 segundo(s) para a maquina concluir o craft.
             requires = {
                 -- ITENS NECESSARIOS PARA O CRAFT
                 { item = "fita_de_pano" , amount = 30 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
@@ -3292,18 +3292,18 @@ locations = {
        
     
         ------------- MECANICA --------------
-        ['ThunderCustom'] = {
+        ['Bennys'] = {
             itens = {
                 ['plastico'] = 9999999, 
                 ['metal'] = 9999999, 
-                ['c-cobre'] = 9999999
+                ['c-fio'] = 9999999
             }
         },
         ['StreetRacing'] = {
             itens = {
                 ['plastico'] = 9999999, 
                 ['metal'] = 9999999, 
-                ['c-cobre'] = 9999999
+                ['c-fio'] = 9999999
             }
         },
     
@@ -3311,7 +3311,8 @@ locations = {
         ['Hospital'] = {
             itens = {
                 ['fita_de_pano'] = 9999999, 
-                ['elastico'] = 9999999
+                ['elastico'] = 9999999,
+                ['anestesico'] = 9999999,
             }
         }
     
