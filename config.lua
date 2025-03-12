@@ -1,6 +1,12 @@
 URL  = '127.0.0.1'
 MENSAGEM_BANCADA = 'Pressione \n~r~[E]~w~ para bancada. \n~b~[G]~w~ para o depósito.'
 
+MIN_AMOUNT = 3
+MAX_AMOUNT = 7
+PAYMENT = 3000
+COMBO_PAYMENT = 20000
+
+
 Config = {
     images = 'http://'..URL..'/ultimate/inventario/', -- URL DAS SUAS IMAGENS
     storeLink = 'https://furiarjrj.hydrus.gg/', -- LINK DA SUA LOJA
@@ -91,23 +97,7 @@ Config = {
             farm = {
                 -- ZONA DE FARM
                 list = {
-                    -- {
-                    --     dangerRoute = {
-                    --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                    --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    --     },
-                    --     dominationBonus = {
-                    --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                    --         status = true, -- Se o sistema ta ativo ou não
-                    --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                    --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    --     },
-                    --     itensList = {
-                    --         {item = 'molas', minAmount = 20, maxAmount = 25},
-                    --         {item = 'metal', minAmount = 20, maxAmount = 25},
-                    --         {item = 'pecadearma', minAmount = 5, maxAmount = 10},
-                    --     }
-                    -- },
+                    
                     
                 }
             },
@@ -126,69 +116,57 @@ Config = {
                         itensList = {
                             {
                                 item = 'lsd',
-                                minAmount = 10, -- Quantidade mínima de 'lsd' no delivery
-                                maxAmount = 15, -- Quantidade máxima de 'lsd' no delivery
-                                payment = 100 -- Valor por unidade de 'lsd'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'lsd'
+                            },
                             {
                                 item = 'maconha',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                             {
                                 item = 'opio',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'metanfetamina',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'crack',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                         }
                     },
                     {
                         dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                            status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                            percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
                         },
                         dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                            status = true, -- Se o sistema de bônus está ativo
+                            zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                            bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
                         },
                         itensList = {
                             {
-                                item = 'metanfetamina',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                item = 'combodrogas',
+                                minAmount = MIN_AMOUNT, 
+                                maxAmount = MAX_AMOUNT, 
+                                payment = COMBO_PAYMENT
+                            },
+                            
                         }
-                    }
+                    },
+                    
                 }
             },
             locations = {
@@ -517,52 +495,6 @@ Config = {
                 },
                 {
                     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
-                    name = 'Wolves',
-                    coords = vec3(767.54,-244.91,69.83), -- COORDENADAS DA BANCADA
-                    requireStorage = {
-                        -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
-                        active = true,
-                        name = 'Wolves'
-                    },
-                    log = '',
-                    tablePermission = 'perm.wolves', -- PERMISSAO PARA ACESSAR A BANCADA
-                    craftPermission = 'perm.liderwolves', -- PERMISSAO PARA CRAFTAR ITEM
-                    drawMarker = function(coords, dist)
-                        if dist <= 5.0 then
-                            DrawText3Ds(
-                                coords.x,
-                                coords.y,
-                                coords.z + 0.1,
-                        MENSAGEM_BANCADA
-                    )
-                    DrawMarker(
-                        27,
-                        coords.x,
-                        coords.y,
-                        coords.z - 0.95,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        1.5,
-                        1.5,
-                        1.5,
-                        243,
-                        5,
-                        72,
-                        180,
-                        0,
-                        0,
-                        0,
-                        1
-                            )
-                        end
-                    end -- BLIP DO CHAO
-                },
-                {
-                    -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                     name = 'Franca',
                     coords = vec3(-2436.65,1826.09,198.71), -- COORDENADAS DA BANCADA
                     requireStorage = {
@@ -708,23 +640,7 @@ Config = {
             farm = {
                 -- ZONA DE FARM
                 list = {
-                    -- {
-                    --     dangerRoute = {
-                    --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                    --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    --     },
-                    --     dominationBonus = {
-                    --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                    --         status = true, -- Se o sistema ta ativo ou não
-                    --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                    --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    --     },
-                    --     itensList = {
-                    --         {item = 'capsulas', minAmount = 20, maxAmount = 30},
-                    --         {item = 'polvora', minAmount = 20, maxAmount = 30}
-
-                    --     }
-                    -- }
+                    
                 }
             },
             delivery = {
@@ -742,69 +658,57 @@ Config = {
                         itensList = {
                             {
                                 item = 'lsd',
-                                minAmount = 10, -- Quantidade mínima de 'lsd' no delivery
-                                maxAmount = 15, -- Quantidade máxima de 'lsd' no delivery
-                                payment = 100 -- Valor por unidade de 'lsd'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'lsd'
+                            },
                             {
                                 item = 'maconha',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                             {
                                 item = 'opio',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'metanfetamina',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'crack',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                         }
                     },
                     {
                         dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                            status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                            percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
                         },
                         dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                            status = true, -- Se o sistema de bônus está ativo
+                            zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                            bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
                         },
                         itensList = {
                             {
-                                item = 'metanfetamina',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                item = 'combodrogas',
+                                minAmount = MIN_AMOUNT, 
+                                maxAmount = MAX_AMOUNT, 
+                                payment = COMBO_PAYMENT
+                            },
+                            
                         }
-                    }
+                    },
+                    
                 }
             },
             locations = {
@@ -1184,23 +1088,7 @@ Config = {
             farm = {
                 -- ZONA DE FARM
                 list = {
-                    -- {
-                    --     dangerRoute = {
-                    --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                    --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                    --     },
-                    --     dominationBonus = {
-                    --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                    --         status = true, -- Se o sistema ta ativo ou não
-                    --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                    --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                    --     },
-                    --     itensList = {
-                    --         {item = 'ferro', minAmount = 40, maxAmount = 50},
-                    --         {item = 'aluminio', minAmount = 20, maxAmount = 30},
-                    --         {item = 'plastico', minAmount = 20, maxAmount = 30},
-                    --     }
-                    -- }
+                    
                 }
             },
             delivery = {
@@ -1218,69 +1106,57 @@ Config = {
                         itensList = {
                             {
                                 item = 'lsd',
-                                minAmount = 10, -- Quantidade mínima de 'lsd' no delivery
-                                maxAmount = 15, -- Quantidade máxima de 'lsd' no delivery
-                                payment = 100 -- Valor por unidade de 'lsd'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'lsd'
+                            },
                             {
                                 item = 'maconha',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                             {
                                 item = 'opio',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'metanfetamina',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'crack',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                         }
                     },
                     {
                         dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                            status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                            percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
                         },
                         dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                            status = true, -- Se o sistema de bônus está ativo
+                            zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                            bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
                         },
                         itensList = {
                             {
-                                item = 'metanfetamina',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                item = 'combodrogas',
+                                minAmount = MIN_AMOUNT, 
+                                maxAmount = MAX_AMOUNT, 
+                                payment = COMBO_PAYMENT
+                            },
+                            
                         }
-                    }
+                    },
+                    
                 }
             },
             locations = {
@@ -1424,52 +1300,7 @@ Config = {
                         end
                     end -- BLIP DO CHAO
                 },
-                -- {
-                --     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
-                --     name = 'b13',
-                --     coords = vec3(-616.39,-1620.98,33.01), -- COORDENADAS DA BANCADA
-                --     requireStorage = {
-                --         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
-                --         active = true,
-                --         name = 'b13'
-                --     },
-                --     log = '',
-                --     tablePermission = 'perm.b13', -- PERMISSAO PARA ACESSAR A BANCADA
-                --     craftPermission = 'perm.liderb13', -- PERMISSAO PARA CRAFTAR ITEM
-                --     drawMarker = function(coords, dist)
-                --         if dist <= 5.0 then
-                --             DrawText3Ds(
-                --                 coords.x,
-                --                 coords.y,
-                --                 coords.z + 0.1,
-                --         MENSAGEM_BANCADA
-                --     )
-                --     DrawMarker(
-                --         27,
-                --         coords.x,
-                --         coords.y,
-                --         coords.z - 0.95,
-                --         0,
-                --         0,
-                --         0,
-                --         0,
-                --         0,
-                --         0,
-                --         1.5,
-                --         1.5,
-                --         1.5,
-                --         243,
-                --         5,
-                --         72,
-                --         180,
-                --         0,
-                --         0,
-                --         0,
-                --         1
-                --             )
-                --         end
-                --     end -- BLIP DO CHAO
-                -- }
+                
         }, -- FIM DE UMA BANCADA
 
     }, -- FIM DA  CONFIGURACAO
@@ -1515,23 +1346,7 @@ Config = {
         farm = {
             -- ZONA DE FARM
             list = {
-                -- {
-                --     dangerRoute = {
-                --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                --     },
-                --     dominationBonus = {
-                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                --         status = true, -- Se o sistema ta ativo ou não
-                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                --     },
-                --     itensList = {
-                --         {item = 'plastico', minAmount = 5, maxAmount = 8},
-                --         {item = 'metal', minAmount = 5, maxAmount = 8},
-                --         {item = 'c-cobre', minAmount = 5, maxAmount = 8}
-                --     }
-                -- }
+               
             }
         },
         delivery = {
@@ -1540,54 +1355,7 @@ Config = {
             }
         },
         locations = {
-            -- LOCALIZACOES DESSAS BANCADAS
-            -- {
-            --     -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
-            --     name = 'furiarjCustom',
-            --     coords = vec3(-723.3,-1517.77,5.09), -- COORDENADAS DA BANCADA
-            --     requireStorage = {
-            --         -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
-            --         active = true,
-            --         name = 'furiarjCustom'
-            --     },
-            --     log = '',
-            --     tablePermission = 'mecanico.permissao', -- PERMISSAO PARA ACESSAR A BANCADA
-            --     craftPermission = 'perm.lidermecanica', -- PERMISSAO PARA CRAFTAR ITEM
-            --     drawMarker = function(coords, dist)
-            --         if dist <= 5.0 then
-            --             DrawText3Ds(
-            --                 coords.x,
-            --                 coords.y,
-            --                 coords.z + 0.1,
-            --             MENSAGEM_BANCADA
-            --         )
-            --         DrawMarker(
-            --             27,
-            --             coords.x,
-            --             coords.y,
-            --             coords.z - 0.95,
-            --             0,
-            --             0,
-            --             0,
-            --             0,
-            --             0,
-            --             0,
-            --             1.5,
-            --             1.5,
-            --             1.5,
-            --             243,
-            --             5,
-            --             72,
-            --             180,
-            --             0,
-            --             0,
-            --             0,
-            --             1
-            --             )
-            --         end
-            --     end -- BLIP DO CHAO
-            -- },
-
+           
             {
                 -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
                 name = 'Bennys',
@@ -1715,22 +1483,7 @@ Config = {
     farm = {
         -- ZONA DE FARM
         list = {
-            -- {
-            --     dangerRoute = {
-            --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-            --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-            --     },
-            --     dominationBonus = {
-            --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-            --         status = true, -- Se o sistema ta ativo ou não
-            --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-            --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-            --     },
-            --     itensList = {
-            --         {item = 'fita_de_pano', minAmount = 5, maxAmount = 8},
-            --         {item = 'elastico', minAmount = 5, maxAmount = 8}
-            --     }
-            -- }
+            
         }
     },
     delivery = {
@@ -1854,22 +1607,7 @@ Config = {
     farm = {
         -- ZONA DE FARM
         list = {
-            -- {
-            --     dangerRoute = {
-            --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-            --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-            --     },
-            --     dominationBonus = {
-            --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-            --         status = true, -- Se o sistema ta ativo ou não
-            --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-            --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-            --     },
-            --     itensList = {
-            --         {item = 'acidolsd', minAmount = 10, maxAmount = 15},
-            --         {item = 'pastabase', minAmount = 10, maxAmount = 15},
-            --     }
-            -- }
+           
         }
     },
     delivery = {
@@ -1887,69 +1625,57 @@ Config = {
                 itensList = {
                     {
                         item = 'lsd',
-                        minAmount = 3, -- Quantidade mínima de 'lsd' no delivery
-                        maxAmount = 6, -- Quantidade máxima de 'lsd' no delivery
-                        payment = 1500 -- Valor por unidade de 'lsd'
-                    }
-                }
-            },
-            {
-                dangerRoute = {
-                    status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                    percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                },
-                dominationBonus = {
-                    status = true, -- Bônus ativo
-                    zone = false, -- Zona necessária para duplicar o farm
-                    bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                },
-                itensList = {
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'lsd'
+                    },
                     {
                         item = 'maconha',
-                        minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                        maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                        payment = 1500 -- Valor por unidade de 'maconha'
-                    }
-                }
-            },
-            {
-                dangerRoute = {
-                    status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                    percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                },
-                dominationBonus = {
-                    status = true, -- Bônus ativo
-                    zone = false, -- Zona necessária para duplicar o farm
-                    bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                },
-                itensList = {
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    },
                     {
                         item = 'opio',
-                        minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                        maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                        payment = 1500 -- Valor por unidade de 'maconha'
-                    }
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    },
+                    {
+                        item = 'metanfetamina',
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    },
+                    {
+                        item = 'crack',
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    },
                 }
             },
             {
                 dangerRoute = {
-                    status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                    percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                    status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                    percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
                 },
                 dominationBonus = {
-                    status = true, -- Bônus ativo
-                    zone = false, -- Zona necessária para duplicar o farm
-                    bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                    status = true, -- Se o sistema de bônus está ativo
+                    zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                    bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
                 },
                 itensList = {
                     {
-                        item = 'metanfetamina',
-                        minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                        maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                        payment = 1500 -- Valor por unidade de 'maconha'
-                    }
+                        item = 'combodrogas',
+                        minAmount = MIN_AMOUNT, 
+                        maxAmount = MAX_AMOUNT, 
+                        payment = COMBO_PAYMENT
+                    },
+                    
                 }
-            }
+            },
+            
         }
     },
     
@@ -2024,22 +1750,7 @@ craft = {
 farm = {
     -- ZONA DE FARM
     list = {
-        -- {
-        --     dangerRoute = {
-        --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-        --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-        --     },
-        --     dominationBonus = {
-        --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-        --         status = true, -- Se o sistema ta ativo ou não
-        --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-        --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-        --     },
-        --     itensList = {
-        --         {item = 'opiopapoula', minAmount = 10, maxAmount = 15},
-        --         {item = 'pastabase', minAmount = 10, maxAmount = 15},
-        --     }
-        -- }
+        
     }
 },
 delivery = {
@@ -2057,69 +1768,57 @@ delivery = {
             itensList = {
                 {
                     item = 'lsd',
-                    minAmount = 3, -- Quantidade mínima de 'lsd' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'lsd' no delivery
-                    payment = 1500 -- Valor por unidade de 'lsd'
-                }
-            }
-        },
-        {
-            dangerRoute = {
-                status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-            },
-            dominationBonus = {
-                status = true, -- Bônus ativo
-                zone = false, -- Zona necessária para duplicar o farm
-                bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-            },
-            itensList = {
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'lsd'
+                },
                 {
                     item = 'maconha',
-                    minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                    payment = 1500 -- Valor por unidade de 'maconha'
-                }
-            }
-        },
-        {
-            dangerRoute = {
-                status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-            },
-            dominationBonus = {
-                status = true, -- Bônus ativo
-                zone = false, -- Zona necessária para duplicar o farm
-                bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-            },
-            itensList = {
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
                 {
                     item = 'opio',
-                    minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                    payment = 1500 -- Valor por unidade de 'maconha'
-                }
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
+                {
+                    item = 'metanfetamina',
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
+                {
+                    item = 'crack',
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
             }
         },
         {
             dangerRoute = {
-                status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
             },
             dominationBonus = {
-                status = true, -- Bônus ativo
-                zone = false, -- Zona necessária para duplicar o farm
-                bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                status = true, -- Se o sistema de bônus está ativo
+                zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
             },
             itensList = {
                 {
-                    item = 'metanfetamina',
-                    minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                    payment = 1500 -- Valor por unidade de 'maconha'
-                }
+                    item = 'combodrogas',
+                    minAmount = MIN_AMOUNT, 
+                    maxAmount = MAX_AMOUNT, 
+                    payment = COMBO_PAYMENT
+                },
+                
             }
-        }
+        },
+        
     }
 },
 
@@ -2193,22 +1892,7 @@ craft = {
 farm = {
     -- ZONA DE FARM
     list = {
-        -- {
-        --     dangerRoute = {
-        --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-        --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-        --     },
-        --     dominationBonus = {
-        --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-        --         status = true, -- Se o sistema ta ativo ou não
-        --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-        --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-        --     },
-        --     itensList = {
-        --         {item = 'folhamaconha', minAmount = 10, maxAmount = 15},
-        --         {item = 'plastico', minAmount = 10, maxAmount = 15},
-        --     }
-        -- }
+       
     }
 },
 delivery = {
@@ -2226,69 +1910,57 @@ delivery = {
             itensList = {
                 {
                     item = 'lsd',
-                    minAmount = 3, -- Quantidade mínima de 'lsd' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'lsd' no delivery
-                    payment = 1500 -- Valor por unidade de 'lsd'
-                }
-            }
-        },
-        {
-            dangerRoute = {
-                status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-            },
-            dominationBonus = {
-                status = true, -- Bônus ativo
-                zone = false, -- Zona necessária para duplicar o farm
-                bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-            },
-            itensList = {
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'lsd''
+                },
                 {
                     item = 'maconha',
-                    minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                    payment = 1500 -- Valor por unidade de 'maconha'
-                }
-            }
-        },
-        {
-            dangerRoute = {
-                status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-            },
-            dominationBonus = {
-                status = true, -- Bônus ativo
-                zone = false, -- Zona necessária para duplicar o farm
-                bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-            },
-            itensList = {
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
                 {
                     item = 'opio',
-                    minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                    payment = 1500 -- Valor por unidade de 'maconha'
-                }
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
+                {
+                    item = 'metanfetamina',
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
+                {
+                    item = 'crack',
+                    minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                    maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                    payment = PAYMENT -- Valor por unidade de 'maconha'
+                },
             }
         },
         {
             dangerRoute = {
-                status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
             },
             dominationBonus = {
-                status = true, -- Bônus ativo
-                zone = false, -- Zona necessária para duplicar o farm
-                bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                status = true, -- Se o sistema de bônus está ativo
+                zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
             },
             itensList = {
                 {
-                    item = 'metanfetamina',
-                    minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                    maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                    payment = 1500 -- Valor por unidade de 'maconha'
-                }
+                    item = 'combodrogas',
+                    minAmount = MIN_AMOUNT, 
+                    maxAmount = MAX_AMOUNT, 
+                    payment = COMBO_PAYMENT
+                },
+                
             }
-        }
+        },
+        
     }
 },
 
@@ -2341,6 +2013,149 @@ locations = {
         end -- BLIP DO CHAO
     },
 }, -- FIM DE UMA BANCADA
+
+
+}, 
+
+['Drogas3'] = {
+-- INICIO DE UMA BANCADA, NUNCA REPETIR ESSE NOME
+    craft = {
+        -- ZONA DE CRAFT
+        {
+            item = 'crack', -- SPAWN DO ITEM
+            amount = 15, -- Quantidade de item que vai receber por unidade selecionada.
+            itemTime = 10, -- 30 segundo(s) para a maquina concluir o craft.
+            requires = {
+                -- ITENS NECESSARIOS PARA O CRAFT
+                { item = "folhadacoca" , amount = 35 }, -- ITEM / QUANTIDADE ( POR UNIDADE )
+                { item = "plastico" , amount = 35 }  
+            }
+        }
+    },
+    farm = {
+        -- ZONA DE FARM
+        list = {
+           
+        }
+    },
+    delivery = {
+        list = {
+            {
+                dangerRoute = {
+                    status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                    percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
+                },
+                dominationBonus = {
+                    status = true, -- Se o sistema de bônus está ativo
+                    zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                    bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
+                },
+                itensList = {
+                    {
+                        item = 'lsd',
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'lsd'
+                    },
+                    {
+                        item = 'maconha',
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    },
+                    {
+                        item = 'opio',
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    },
+                    {
+                        item = 'metanfetamina',
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    },
+                    {
+                        item = 'crack',
+                        minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                        maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                        payment = PAYMENT -- Valor por unidade de 'maconha'
+                    }
+                }
+            },
+            {
+                dangerRoute = {
+                    status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                    percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
+                },
+                dominationBonus = {
+                    status = true, -- Se o sistema de bônus está ativo
+                    zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                    bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
+                },
+                itensList = {
+                    {
+                        item = 'combodrogas',
+                        minAmount = MIN_AMOUNT, 
+                        maxAmount = MAX_AMOUNT, 
+                        payment = COMBO_PAYMENT
+                    },
+                    
+                }
+            },
+            
+        }
+    },
+
+    locations = {
+        -- LOCALIZACOES DESSAS BANCADAS
+        {
+            -- POSSIVEL ADICIONAR VARIAS LOCALIZACOES E VARIAS ORGANIZACOES DIFERENTE
+            name = 'Wolves',
+            coords = vec3(767.54,-244.91,69.83), -- COORDENADAS DA BANCADA
+            requireStorage = {
+                -- SE VAI PUXAR OS ITENS DO ARMAZEM NA HORA DE FABRICAR ( Caso for true configurar na parte Storages )
+                active = true,
+                name = 'Wolves'
+            },
+            log = '',
+            tablePermission = 'perm.wolves', -- PERMISSAO PARA ACESSAR A BANCADA
+            craftPermission = 'perm.liderwolves', -- PERMISSAO PARA CRAFTAR ITEM
+            drawMarker = function(coords, dist)
+                if dist <= 5.0 then
+                    DrawText3Ds(
+                        coords.x,
+                        coords.y,
+                        coords.z + 0.1,
+                MENSAGEM_BANCADA
+            )
+            DrawMarker(
+                27,
+                coords.x,
+                coords.y,
+                coords.z - 0.95,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1.5,
+                1.5,
+                1.5,
+                243,
+                5,
+                72,
+                180,
+                0,
+                0,
+                0,
+                1
+                    )
+                end
+            end -- BLIP DO CHAO
+        },
+    }, -- FIM DE UMA BANCADA
 
 
 }, -- FIM DA  CONFIGURACAO
@@ -2404,41 +2219,7 @@ locations = {
         farm = {
             -- ZONA DE FARM
             list = {
-                -- {
-                --     dangerRoute = {
-                --         status = true, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                --         percentualPolice = 3 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                --     },
-                --     dominationBonus = {
-                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                --         status = true, -- Se o sistema ta ativo ou não
-                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                --     },
-                --     itensList = {
-                --         {item = 'c-cobre', minAmount = 10, maxAmount = 15},
-                --         {item = 'c-fio', minAmount = 10, maxAmount = 15},
-                --         {item = 'polvora', minAmount = 10, maxAmount = 15},
-                --         -- {item = 'aluminio', minAmount = 10, maxAmount = 15},
-                --     }
-                -- },
-                -- {
-                --     dangerRoute = {
-                --         status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                --         percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                --     },
-                --     dominationBonus = {
-                --         -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                --         status = true, -- Se o sistema ta ativo ou não
-                --         zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                --         bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                --     },
-                --     itensList = {
-                --         {item = 'c-ferro', minAmount = 10, maxAmount = 15},
-                --         {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
-                --         {item = 'm-aco', minAmount = 10, maxAmount = 15},
-                --     }
-                -- },
+               
                 
             }
         },
@@ -2457,69 +2238,57 @@ locations = {
                     itensList = {
                         {
                             item = 'lsd',
-                            minAmount = 10, -- Quantidade mínima de 'lsd' no delivery
-                            maxAmount = 15, -- Quantidade máxima de 'lsd' no delivery
-                            payment = 100 -- Valor por unidade de 'lsd'
-                        }
-                    }
-                },
-                {
-                    dangerRoute = {
-                        status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                        percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                    },
-                    dominationBonus = {
-                        status = true, -- Bônus ativo
-                        zone = false, -- Zona necessária para duplicar o farm
-                        bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                    },
-                    itensList = {
+                            minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                            maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                            payment = PAYMENT -- Valor por unidade de 'lsd'
+                        },
                         {
                             item = 'maconha',
-                            minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                            maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                            payment = 50 -- Valor por unidade de 'maconha'
-                        }
-                    }
-                },
-                {
-                    dangerRoute = {
-                        status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                        percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                    },
-                    dominationBonus = {
-                        status = true, -- Bônus ativo
-                        zone = false, -- Zona necessária para duplicar o farm
-                        bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                    },
-                    itensList = {
+                            minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                            maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                            payment = PAYMENT -- Valor por unidade de 'maconha'
+                        },
                         {
                             item = 'opio',
-                            minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                            maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                            payment = 50 -- Valor por unidade de 'maconha'
-                        }
+                            minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                            maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                            payment = PAYMENT -- Valor por unidade de 'maconha'
+                        },
+                        {
+                            item = 'metanfetamina',
+                            minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                            maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                            payment = PAYMENT -- Valor por unidade de 'maconha'
+                        },
+                        {
+                            item = 'crack',
+                            minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                            maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                            payment = PAYMENT -- Valor por unidade de 'maconha'
+                        },
                     }
                 },
                 {
                     dangerRoute = {
-                        status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                        percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                        status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                        percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
                     },
                     dominationBonus = {
-                        status = true, -- Bônus ativo
-                        zone = false, -- Zona necessária para duplicar o farm
-                        bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                        status = true, -- Se o sistema de bônus está ativo
+                        zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                        bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
                     },
                     itensList = {
                         {
-                            item = 'metanfetamina',
-                            minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                            maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                            payment = 50 -- Valor por unidade de 'maconha'
-                        }
+                            item = 'combodrogas',
+                            minAmount = MIN_AMOUNT, 
+                            maxAmount = MAX_AMOUNT, 
+                            payment = COMBO_PAYMENT
+                        },
+                        
                     }
-                }
+                },
+                
             }
         },
         
@@ -2799,27 +2568,7 @@ locations = {
                 },
             },
             farm = {
-                -- ZONA DE FARM
-                -- list = {
-                --     {
-                --         dangerRoute = {
-                --             status = false, -- Rota Perigosa ( CHANCE DE CHAMAR A POLICIA )
-                --             percentualPolice = 30 -- 3% De chamar A Policia ( APENAS SE O DangerRoute For ativo )
-                --         },
-                --         dominationBonus = {
-                --             -- Caso utilize o script mirtin_dominacao e queira dobrar/triplicar o farm se tiver a zona dominada.
-                --             status = true, -- Se o sistema ta ativo ou não
-                --             zone = false, -- Qual a zona que precisa ter dominada para boostar o farm. Exemplo: [ 'Armas', 'Municao' ou etc ]
-                --             bonus = 2 -- 2x Quantidade que o farm vai duplicar quando estiver com a zona dominada.
-                --         },
-                --         itensList = {
-                --             {item = 'ferro', minAmount = 3, maxAmount = 6},
-                --             {item = 'pacote_tecido', minAmount = 10, maxAmount = 15},
-                --             {item = 'm-malha', minAmount = 20, maxAmount = 30},
-                --         }
-                --     },
-                    
-                -- }
+                
             },
             delivery = {
                 list = {
@@ -2836,69 +2585,57 @@ locations = {
                         itensList = {
                             {
                                 item = 'lsd',
-                                minAmount = 10, -- Quantidade mínima de 'lsd' no delivery
-                                maxAmount = 15, -- Quantidade máxima de 'lsd' no delivery
-                                payment = 100 -- Valor por unidade de 'lsd'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'lsd' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'lsd' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'lsd'
+                            },
                             {
                                 item = 'maconha',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
-                        }
-                    },
-                    {
-                        dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
-                        },
-                        dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
-                        },
-                        itensList = {
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                             {
                                 item = 'opio',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'metanfetamina',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
+                            {
+                                item = 'crack',
+                                minAmount = MIN_AMOUNT, -- Quantidade mínima de 'maconha' no delivery
+                                maxAmount = MAX_AMOUNT, -- Quantidade máxima de 'maconha' no delivery
+                                payment = PAYMENT -- Valor por unidade de 'maconha'
+                            },
                         }
                     },
                     {
                         dangerRoute = {
-                            status = true, -- Rota não perigosa (sem chance de chamar a polícia)
-                            percentualPolice = 30 -- 30% de chance de chamar a polícia (apenas se DangerRoute for ativo)
+                            status = true, -- Rota Perigosa (CHANCE DE CHAMAR A POLICIA)
+                            percentualPolice = 30 -- 3% de chamar a polícia (APENAS SE DangerRoute estiver ativo)
                         },
                         dominationBonus = {
-                            status = true, -- Bônus ativo
-                            zone = false, -- Zona necessária para duplicar o farm
-                            bonus = 2 -- Multiplicador de 2x quando a zona for dominada
+                            status = true, -- Se o sistema de bônus está ativo
+                            zone = false, -- Zona necessária para duplicar o farm (exemplo: 'Armas', 'Municao', etc.)
+                            bonus = 2 -- 2x a quantidade de itens coletados ao dominar a zona
                         },
                         itensList = {
                             {
-                                item = 'metanfetamina',
-                                minAmount = 3, -- Quantidade mínima de 'maconha' no delivery
-                                maxAmount = 6, -- Quantidade máxima de 'maconha' no delivery
-                                payment = 50 -- Valor por unidade de 'maconha'
-                            }
+                                item = 'combodrogas',
+                                minAmount = MIN_AMOUNT, 
+                                maxAmount = MAX_AMOUNT, 
+                                payment = COMBO_PAYMENT
+                            },
+                            
                         }
-                    }
+                    },
+                    
                 }
             },
             locations = {
@@ -3198,14 +2935,6 @@ locations = {
                 ['metal'] = 9999999
             }
         },
-        ['Wolves'] = {
-            itens = {
-                ['pecadearma'] = 9999999, 
-                ['gatilho'] = 9999999, 
-                ['molas'] = 9999999, 
-                ['metal'] = 9999999
-            }
-        },
         ['Franca'] = {
             itens = {
                 ['pecadearma'] = 9999999, 
@@ -3232,6 +2961,12 @@ locations = {
             itens = {
                 ['pastabase'] = 9999999, 
                 ['opiopapoula'] = 9999999
+            }
+        },
+        ['Wolves'] = {
+            itens = {
+                ['folhadacoca'] = 9999999, 
+                ['plastico'] = 9999999
             }
         },
     
