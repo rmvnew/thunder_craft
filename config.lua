@@ -4,7 +4,7 @@ MENSAGEM_BANCADA = 'Pressione \n~r~[E]~w~ para bancada. \n~b~[G]~w~ para o depó
 MIN_AMOUNT = 3
 MAX_AMOUNT = 7
 PAYMENT = 3000
-COMBO_PAYMENT = 20000
+COMBO_PAYMENT = 25000
 
 
 Config = {
